@@ -155,3 +155,11 @@
     background-color: rgb(245, 245, 247);
     margin-left: 200px;
 }
+
+.ModalBlock{
+    width: 350px;
+    height: 600px;
+    margin-top: 300px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
