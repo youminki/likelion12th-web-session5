@@ -25,15 +25,16 @@ const Footer = () => {
   return (
     <Router>
       <>
-        <div className='watchaLogo'>
-          <img src={watcha} alt="watcha"></img>
+        <div className='header'>
+          <div className='watchaLogo'>
+            <img src={watcha} alt="watcha"></img>
+          </div>
+          <div className='list1'><Link to="/movie">영화</Link></div>
+          <div className='list2'><Link to="/series">시리즈</Link></div>
+          <div className='list3'><Link to="/book">책</Link></div>
+          <div className='list4'><Link to="/webtoon">웹툰</Link></div>
+          <div className="LoginButton" onClick={openModal}>로그인</div>
         </div>
-        <div className='list1'><Link to="/movie">영화</Link></div>
-        <div className='list2'><Link to="/series">시리즈</Link></div>
-        <div className='list3'><Link to="/book">책</Link></div>
-        <div className='list4'><Link to="/webtoon">웹툰</Link></div>
-
-        <div className="LoginButton" onClick={openModal}>로그인</div>
         <Modal open={loginModalOpen} close={closeModal}>
           <img className="LogoImage" src={logo} alt="로고 이미지" />
           <div className="Title">로그인</div>
@@ -60,6 +61,7 @@ const Footer = () => {
             TIP.왓챠 계정이 있으신가요? 왓챠와 왓챠피디아는 같은 계정을 사용해요.
           </div>
         </Modal>
+
         <Routes>
           <Route path="/movie" element={<Movie />} />
           <Route path="/series" element={<Series />} />

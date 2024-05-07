@@ -1,6 +1,11 @@
 .watchaLogo img {
-    width: 10%;
+    width: 50%;
     height: auto;
     margin: 2%;
 
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
