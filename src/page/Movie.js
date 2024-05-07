@@ -30,11 +30,9 @@ const Movie = () => {
                 {movies.map((movie, index) => (
                     <div key={index} className='movieItem'>
                         <img src={movie.src} alt={movie.title} />
-                        <div>제목: {movie.title}</div>
-                        <div>년도: {movie.years}</div>
-                        <div>국가: {movie.country}</div>
-                        <div>예매율: {movie.reservationRate}</div>
-                        <div>누적 관객: {movie.audience}</div>
+                        <div className='content1'> {movie.title}</div>
+                        <div className='content2'>{movie.years} ・ {movie.country}</div>
+                        <div className='content3'>예매율 {movie.reservationRate} 누적 관객 {movie.audience}</div>
                     </div>
                 ))}
             </div>
