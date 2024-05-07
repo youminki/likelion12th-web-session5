@@ -1,3 +1,15 @@
-.movieList{
-    width: 100%;
+.titleName{
+    position: relative;
+    color: rgb(41, 42, 50);
+    text-overflow: ellipsis;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: 30px; 
 }
+.movieList {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  

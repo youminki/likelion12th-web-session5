@@ -11,18 +11,34 @@ import movie9 from '../assets/image/9.jpg';
 import '../page/Movie.css';
 
 const Movie = () => {
+    const movies = [
+        { src: movie1, title: '범죄도시4', years:'2023', country: '한국', reservationRate: '36%', audience: '100만' },
+        { src: movie2, title: '쿵푸팬더4', years:'2023', country: '한국', reservationRate: '36%', audience: '200만' },
+        { src: movie3, title: '혹성탈출(새로운 시대)', years:'2023', country: '한국', reservationRate: '36%', audience: '300만' },
+        { src: movie4, title: '포켓몬스터(성도지방 이야기, 최종장)', years:'2023', country: '한국', reservationRate: '36%', audience: '400만' },
+        { src: movie5, title: '스턴트맨', years:'2023', country: '한국', reservationRate: '36%', audience: '500만' },
+        { src: movie6, title: '악마와의 토크쇼', years:'2023', country: '한국', reservationRate: '36%', audience: '600만' },
+        { src: movie7, title: '가필드 더 무비', years:'2023', country: '한국', reservationRate: '36%', audience: '700만' },
+        { src: movie8, title: '하이큐 극장판(쓰레기장의 결전)', years:'2023', country: '한국', reservationRate: '36%', audience: '800만' },
+        { src: movie9, title: '꼬마참새 리차드(신비한 보석 탐험대)', years:'2023', country: '한국', reservationRate: '36%', audience: '900만' },
+    ];
+
     return (
-        <div className="movieList">
-            <img src={movie1} alt="movie1" />
-            <img src={movie2} alt="movie2" />
-            <img src={movie3} alt="movie3" />
-            <img src={movie4} alt="movie4" />
-            <img src={movie5} alt="movie5" />
-            <img src={movie6} alt="movie6" />
-            <img src={movie7} alt="movie7" />
-            <img src={movie8} alt="movie8" />
-            <img src={movie9} alt="movie9" />
-        </div>
+        <>
+            <div className='titleName'>박스 오피스 순위</div>
+            <div className="movieList">
+                {movies.map((movie, index) => (
+                    <div key={index} className='movieItem'>
+                        <img src={movie.src} alt={movie.title} />
+                        <div>제목: {movie.title}</div>
+                        <div>년도: {movie.years}</div>
+                        <div>국가: {movie.country}</div>
+                        <div>예매율: {movie.reservationRate}</div>
+                        <div>누적 관객: {movie.audience}</div>
+                    </div>
+                ))}
+            </div>
+        </>
     );
 };
 
