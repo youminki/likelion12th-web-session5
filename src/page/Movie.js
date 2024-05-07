@@ -25,14 +25,38 @@ const Movie = () => {
 
     return (
         <>
-            <div className='titleName'>박스 오피스 순위</div>
+            <div className='titleName'>박스오피스 순위</div>
             <div className="movieList">
                 {movies.map((movie, index) => (
                     <div key={index} className='movieItem'>
                         <img src={movie.src} alt={movie.title} />
                         <div className='content1'> {movie.title}</div>
                         <div className='content2'>{movie.years} ・ {movie.country}</div>
-                        <div className='content3'>예매율 {movie.reservationRate} 누적 관객 {movie.audience}</div>
+                        <div className='content3'>예매율 {movie.reservationRate} ・ 누적 관객 {movie.audience}</div>
+                    </div>
+                ))}
+            </div>
+            
+            <div className='titleName'>공개 예정작</div>
+            <div className="movieList">
+                {movies.map((movie, index) => (
+                    <div key={index} className='movieItem'>
+                        <img src={movie.src} alt={movie.title} />
+                        <div className='content1'> {movie.title}</div>
+                        <div className='content2'>{movie.years} ・ {movie.country}</div>
+                        <div className='content3'>예매율 {movie.reservationRate} ・ 누적 관객 {movie.audience}</div>
+                    </div>
+                ))}
+            </div>
+
+            <div className='titleName'>왓챠 구매 순위</div>
+            <div className="movieList">
+                {movies.map((movie, index) => (
+                    <div key={index} className='movieItem'>
+                        <img src={movie.src} alt={movie.title} />
+                        <div className='content1'> {movie.title}</div>
+                        <div className='content2'>{movie.years} ・ {movie.country}</div>
+                        <div className='content3'>예매율 {movie.reservationRate} ・ 누적 관객 {movie.audience}</div>
                     </div>
                 ))}
             </div>
