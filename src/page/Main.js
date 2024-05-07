@@ -2,12 +2,12 @@
 
 import { useState } from 'react';
 import styled from 'styled-components';
-import Modal from '../components/Modal';
-import kakao from '../assets/image/icon_kakao.png';
 import google from '../assets/image/icon_google.png';
-import twitter from '../assets/image/icon_twitter.png';
+import kakao from '../assets/image/icon_kakao.png';
 import line from '../assets/image/icon_line.png';
 import logo from '../assets/image/icon_logo.png';
+import twitter from '../assets/image/icon_twitter.png';
+import Modal from '../components/Modal';
 
 const Main = () => {
   const [loginModalOpen, setLoginModalOpen] = useState(false);
