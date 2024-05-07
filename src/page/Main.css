@@ -1,0 +1,80 @@
+.LoginButton {
+    cursor: pointer;
+    margin-right: 20px;
+    border: none;
+    background: none;
+}
+
+.LogoImage {
+    width: 200px;
+}
+
+.CenterBlock {
+    display: flex;
+    justify-content: center;
+}
+
+.WrapIcon {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+}
+
+.Title {
+    font-weight: bolder;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.LoginRedButton {
+    width: 330px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #ff2f6e;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.Content {
+    margin: 15px 10px;
+}
+
+.LoginInput {
+    width: 330px;
+    height: 40px;
+    margin: 5px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+}
+
+.LoginInput::placeholder {
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.GrayLine {
+    width: 130px;
+    height: 1px;
+    background-color: #00000020;
+    margin-top: 10px;
+}
+
+.OrContent {
+    color: #8c8c8c;
+    font-size: 14px;
+    margin: 0 20px;
+}
+
+.LoginTip {
+    color: #8d8e8f;
+    background-color: #f7f7f7;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
