@@ -23,8 +23,9 @@
     font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.4px;
-    line-height: 30px;
+    line-height: 100px;
     margin: 42px;
+    margin-bottom: -50px;
 }
 .movieList {
     display: flex;
