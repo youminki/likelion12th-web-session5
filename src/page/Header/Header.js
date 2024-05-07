@@ -48,7 +48,15 @@ const Footer = () => {
           <div className='list2'><Link to="/series">시리즈</Link></div>
           <div className='list3'><Link to="/book">책</Link></div>
           <div className='list4'><Link to="/webtoon">웹툰</Link></div>
-          <input type="text" placeholder="검색" value={searchTerm} onChange={handleSearchChange} />
+
+          <input
+            type="text"
+            placeholder="검색"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            className="searchInput"
+          />
+
           <div className="LoginButton" onClick={openLoginModal}>로그인</div>
           <button className="SignUpButton" onClick={openSignUpModal}>회원가입</button>
         </div>

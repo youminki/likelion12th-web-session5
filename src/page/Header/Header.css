@@ -1,13 +1,153 @@
 .watchaLogo img {
-    width: 50%;
+    width: 151px;
     height: auto;
-    margin: 2%;
-
+    margin-left: 20px;
 }
+
 .header {
     background-color: aqua;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    color: rgb(126, 126, 126);
+    outline: inherit;
+    cursor: pointer;
 }
 
+.list1>a {
+    text-decoration: none;
+    color: rgb(126, 126, 126);
+}
+
+.list2>a {
+    text-decoration: none;
+    color: rgb(126, 126, 126);
+}
+
+.list3>a {
+    text-decoration: none;
+    color: rgb(126, 126, 126);
+}
+
+.list4>a {
+    text-decoration: none;
+    color: rgb(126, 126, 126);
+}
+
+.list {
+    display: flex;
+
+    font-size: 15px;
+
+}
+
+.SignUpButton {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 500;
+    line-height: 20px;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 72px;
+    height: 32px;
+    background: transparent;
+    color: rgb(53, 53, 53);
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    padding: 5px 14px 6px;
+    border: 1px solid rgba(116, 116, 123, 0.5);
+    margin: 15px 0px;
+}
+
+.LoginButton {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.LogoImage {
+    width: 200px;
+}
+
+.CenterBlock {
+    display: flex;
+    justify-content: center;
+}
+
+.WrapIcon {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+}
+
+.Title {
+    font-weight: bolder;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.LoginRedButton {
+    width: 330px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #ff2f6e;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.Content {
+    margin: 15px 10px;
+}
+
+.LoginInput {
+    width: 330px;
+    height: 40px;
+    margin: 5px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+}
+
+.LoginInput::placeholder {
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.GrayLine {
+    width: 130px;
+    height: 1px;
+    background-color: #00000020;
+    margin-top: 10px;
+}
+
+.OrContent {
+    color: #8c8c8c;
+    font-size: 14px;
+    margin: 0 20px;
+}
+
+.LoginTip {
+    color: #8d8e8f;
+    background-color: #f7f7f7;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.searchInput {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 20%;
+    height: 38px;
+    padding: 7px 10px 8px 36px;
+    border-radius: 2px;
+    background-color: rgb(245, 245, 247);
+    margin-left: 200px;
+}
