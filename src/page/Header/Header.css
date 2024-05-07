@@ -12,12 +12,23 @@
     background-color: aqua;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     color: rgb(126, 126, 126);
     outline: inherit;
     cursor: pointer;
 }
+.header .list1,
+.header .list2,
+.header .list3,
+.header .list4 {
+  display: inline-block;
+}
 
+.searchInput,
+.LoginButton,
+.SignUpButton {
+  display: inline-block;
+}
 .list1>a {
     text-decoration: none;
     color: rgb(126, 126, 126);
