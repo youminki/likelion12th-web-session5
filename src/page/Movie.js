@@ -8,6 +8,7 @@ import movie6 from '../assets/image/6.jpg';
 import movie7 from '../assets/image/7.jpg';
 import movie8 from '../assets/image/8.jpg';
 import movie9 from '../assets/image/9.jpg';
+import '../page/Movie.css';
 
 const Movie = () => {
     return (
