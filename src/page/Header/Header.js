@@ -4,7 +4,7 @@ import { useState } from 'react';
 import google from '../../assets/image/icon_google.png';
 import kakao from '../../assets/image/icon_kakao.png';
 import line from '../../assets/image/icon_line.png';
-import logo from '../../assets/image/icon_logo.png';
+import { default as logo, default as whatcha } from '../../assets/image/icon_logo.png';
 import twitter from '../../assets/image/icon_twitter.png';
 import Modal from '../../components/Modal';
 import '../Header/Header.css';
@@ -21,6 +21,14 @@ const Footer = () => {
   };
   return (
     <>
+      <div className='whatchaLogo'>
+        <img src={whatcha} alt="whatcha"></img>
+      </div>
+      <div className='list1'> 영화 </div>
+      <div className='list2'> 시리즈 </div>
+      <div className='list3'> 책 </div>
+      <div className='list4'> 웹툰 </div>
+
       <div className="LoginButton" onClick={openModal}>로그인</div>
       <Modal open={loginModalOpen} close={closeModal}>
         <img className="LogoImage" src={logo} alt="로고 이미지" />
@@ -28,10 +36,10 @@ const Footer = () => {
         <input className="LoginInput" placeholder="이메일" />
         <input className="LoginInput" placeholder="비밀번호" />
         <button className="LoginRedButton">로그인</button>
-        <div className="Content" style={{color: "#ff2f6e"}}>비밀번호를 잃어버리셨나요?</div>
+        <div className="Content" style={{ color: "#ff2f6e" }}>비밀번호를 잃어버리셨나요?</div>
         <div className="CenterBlock">
-          <div className="Content" style={{color: "#8c8c8c"}}>계정이 없으신가요?</div>
-          <div className="Content" style={{color: "#ff2f6e"}}>회원가입</div>
+          <div className="Content" style={{ color: "#8c8c8c" }}>계정이 없으신가요?</div>
+          <div className="Content" style={{ color: "#ff2f6e" }}>회원가입</div>
         </div>
         <div className="CenterBlock">
           <div className="GrayLine" />
