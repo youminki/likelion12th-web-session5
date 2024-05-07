@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import google from '../../assets/image/icon_google.png';
 import kakao from '../../assets/image/icon_kakao.png';
@@ -16,6 +16,8 @@ const Footer = () => {
   const [loginModalOpen, setLoginModalOpen] = useState(false);
   const [signUpModalOpen, setSignUpModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const openLoginModal = () => {
     setLoginModalOpen(true);
@@ -37,6 +39,21 @@ const Footer = () => {
     setSearchTerm(event.target.value);
   };
 
+  useEffect(() => {
+    localStorage.setItem('email', 'dbalsrl7648@naver.com'); //로그인 아이디
+    localStorage.setItem('password', '1234'); //로그인 비밀번호
+  }, []);
+
+  const handleLogin = () => {
+    const storedEmail = localStorage.getItem('email');
+    const storedPassword = localStorage.getItem('password');
+
+    if (email === storedEmail && password === storedPassword) {
+      alert('로그인 성공');
+    } else {
+      alert('로그인 실패');
+    }
+  };
   return (
     <Router>
       <>
@@ -63,9 +80,9 @@ const Footer = () => {
         <Modal open={loginModalOpen} close={closeLoginModal}>
           <img className="LogoImage" src={logo} alt="로고 이미지" />
           <div className="Title">로그인</div>
-          <input className="LoginInput" placeholder="이메일" />
-          <input className="LoginInput" placeholder="비밀번호" />
-          <button className="LoginRedButton">로그인</button>
+          <input className="LoginInput" placeholder="이메일" onChange={(e) => setEmail(e.target.value)} />
+          <input className="LoginInput" placeholder="비밀번호" onChange={(e) => setPassword(e.target.value)} />
+          <button className="LoginRedButton" onClick={handleLogin}>로그인</button>
           <div className="Content" style={{ color: "#ff2f6e" }}>비밀번호를 잃어버리셨나요?</div>
           <div className="CenterBlock">
             <div className="Content" style={{ color: "#8c8c8c" }}>계정이 없으신가요?</div>
