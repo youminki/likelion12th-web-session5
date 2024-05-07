@@ -2,11 +2,11 @@
 
 .Footer {
     position: fixed;
-    left: 0;
+    left: 50px;
     bottom: 0;
     width: 100%;
     background-color: yellow;
 
     text-align: left;
-
+    justify-content: space-around;
 }
