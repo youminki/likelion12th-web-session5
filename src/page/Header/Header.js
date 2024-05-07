@@ -1,13 +1,16 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import google from '../../assets/image/icon_google.png';
 import kakao from '../../assets/image/icon_kakao.png';
 import line from '../../assets/image/icon_line.png';
 import { default as logo, default as watcha } from '../../assets/image/icon_logo.png';
 import twitter from '../../assets/image/icon_twitter.png';
 import Modal from '../../components/Modal';
+import Book from '../Book';
 import '../Header/Header.css';
-
+import Movie from '../Movie';
+import Series from '../Series';
+import Webtoon from '../Webtoon';
 
 const Footer = () => {
   const [loginModalOpen, setLoginModalOpen] = useState(false);
@@ -57,10 +60,12 @@ const Footer = () => {
             TIP.왓챠 계정이 있으신가요? 왓챠와 왓챠피디아는 같은 계정을 사용해요.
           </div>
         </Modal>
-        <Route path="/movie" component={Movie} />
-        <Route path="/series" component={Series} />
-        <Route path="/book" component={Book} />
-        <Route path="/webtoon" component={Webtoon} />
+        <Routes>
+          <Route path="/movie" element={<Movie />} />
+          <Route path="/series" element={<Series />} />
+          <Route path="/book" element={<Book />} />
+          <Route path="/webtoon" element={<Webtoon />} />
+        </Routes>
       </>
     </Router>
   );
