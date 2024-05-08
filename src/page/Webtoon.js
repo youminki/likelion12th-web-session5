@@ -16,7 +16,7 @@ const Series = () => {
         { src: webtoonImg2, title: '휘영검전', years:'2023', country: '한국', reservationRate: '36%', audience: '200만' },
         { src: webtoonImg3, title: '아기님 캐시로 로판 달린다', years:'2023', country: '한국', reservationRate: '36%', audience: '300만' },
         { src: webtoonImg4, title: '던전 리셋', years:'2023', country: '한국', reservationRate: '36%', audience: '400만' },
-        { src: webtoonImg5, title: '시그리드', years:'2023', country: '한국', reservationRate: '36%', audience: '500만' },
+        { src: webtoonImg5, title: '노이즈 컴백', years:'2023', country: '한국', reservationRate: '36%', audience: '500만' },
         { src: webtoonImg6, title: '만렙 영웅님께서 귀환하신다!', years:'2023', country: '한국', reservationRate: '36%', audience: '600만' },
         { src: webtoonImg7, title: '로드 오브 머니', years:'2023', country: '한국', reservationRate: '36%', audience: '700만' },
         { src: webtoonImg8, title: '검술명가 막내아들', years:'2023', country: '한국', reservationRate: '36%', audience: '800만' },
