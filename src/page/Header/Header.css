@@ -1,7 +1,11 @@
 .watchaLogo img {
     width: 151px;
-    height: auto;
-    margin-left: 20px;
+    margin-left: 40px;
+}
+.watchaLogo{
+    display: flex;
+    justify-content: space-between;
+    
 }
 
 .header {
@@ -156,12 +160,12 @@
     z-index: 2;
     width: 266px;
     right: 216px;
-    border-radius: 10px 10px;
+    border-radius: 5px 5px;
     border: none;
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    height: 42px;
+    height: 40px;
     padding: 7px 10px 8px 26px;
     background-color: rgb(245, 245, 247);
     margin-left: 200px;
@@ -174,17 +178,18 @@
     justify-content: space-around;
 }
 
+/* Header.css */
 .header .menu {
     display: flex;
     justify-content: space-between;
+    min-width: 200px; /* 최소 크기 설정 */
     padding-left: 40px;
-    width: 200px;
-}
-
-.header .menu a {
+    padding-top: 7px;
+  }
+  
+  .header .menu a {
     color: #000;
     font-size: 15px;
-    margin-right: 10px;
     text-decoration: none;
-}
-
+  }
+  

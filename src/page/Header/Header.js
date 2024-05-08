@@ -23,13 +23,14 @@ const Footer = () => {
         <div className='header'>
           <div className='watchaLogo'>
             <img src={watcha} alt="watcha"></img>
-          </div>
-          <div className='menu'>
+            <div className='menu'>
             <Link to="/movie">영화</Link>
             <Link to="/series">시리즈</Link>
             <Link to="/book">책</Link>
             <Link to="/webtoon">웹툰</Link>
           </div>
+          </div>
+
 
           <div className="userControls">
             <div className="searchContainer">
