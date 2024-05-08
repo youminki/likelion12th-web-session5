@@ -2,10 +2,11 @@
     width: 151px;
     margin-left: 40px;
 }
-.watchaLogo{
+
+.watchaLogo {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .header {
@@ -183,14 +184,14 @@
 .header .menu {
     display: flex;
     justify-content: space-between;
-    min-width: 200px; /* 최소 크기 설정 */
+    min-width: 200px;
+    /* 최소 크기 설정 */
     padding-left: 40px;
     padding-top: 7px;
-  }
-  
-  .header .menu a {
+}
+
+.header .menu a {
     color: #000;
     font-size: 15px;
     text-decoration: none;
-  }
-  
+}

@@ -6,7 +6,7 @@ import '../Footer/Footer.css';
 function Footer() {
     return (
         <div className='Footer'>
-            <div className='star'>지금까지 ★716,373,420 개의 평가가 쌓였어요.</div>
+            <div className='star'>지금까지 <span className='highlight'>★716,392,403 개의 평가가</span> 쌓였어요.</div>
             <div className='li1'>서비스 이용약관 | 개인정보 처리방침 | 회사 안내</div>
 
             <div className='li2'>고객센터 | cs@watchapedia.co.kr, 02-515-9985</div>

@@ -4,8 +4,12 @@
     box-sizing: border-box;
     width: 100%;
     background-color: black;
+    color: white; 
 }
 
+.highlight {
+    color: rgb(255, 5, 88);
+}
 
 .li1, .li2, .li3, .li4, .li5 {
     
