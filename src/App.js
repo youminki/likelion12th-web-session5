@@ -1,6 +1,6 @@
 import Footer from './page/Footer/Footer.js';
 import Header from './page/Header/Header.js';
-import Main from './page/Main.js';
+import Movie from './page/Movie.js';
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header />
-      <Main />
+      <Movie />
       <Footer />
     </>
   );
