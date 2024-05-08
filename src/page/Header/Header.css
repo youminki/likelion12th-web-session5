@@ -124,18 +124,7 @@
     margin: 10px;
 }
 
-.searchInput {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
-    height: 38px;
-    padding: 7px 10px 8px 36px;
-    border-radius: 2px;
-    background-color: rgb(245, 245, 247);
-    margin-left: 200px;
 
-}
 
 .ModalBlock {
     width: 350px;
@@ -153,11 +142,11 @@
 
 .searchContainer img {
     position: absolute;
-    left: 10px;
+    left: -140px;
     top: 50%;
     transform: translateY(-50%);
-    width: 520px;
-    height: 420px;
+    width: 460px;
+    height: 400px;
     cursor: pointer;
     z-index: 1;
 }
@@ -165,23 +154,31 @@
 .searchInput {
     position: relative;
     z-index: 2;
-    width: 296px;
-    height: 40px;
-    right: 50px;
+    width: 266px;
+    right: 216px;
     border-radius: 10px 10px;
     border: none;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 42px;
+    padding: 7px 10px 8px 26px;
+    background-color: rgb(245, 245, 247);
+    margin-left: 200px;
 }
 
 
 .userControls {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .header .menu {
     display: flex;
     justify-content: space-between;
+    padding-left: 40px;
+    width: 200px;
 }
 
 .header .menu a {
@@ -190,3 +187,4 @@
     margin-right: 10px;
     text-decoration: none;
 }
+

@@ -36,7 +36,7 @@ const Footer = () => {
               <img src={searchImg} alt="searchImg"></img>
               <input
                 type="text"
-                placeholder="검색"
+                placeholder="콘텐츠, 인물, 컬렉션, 유저를 검색해보세요."
                 value={searchTerm}
                 onChange={handleSearchChange}
                 className="searchInput"
