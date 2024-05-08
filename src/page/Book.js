@@ -1,62 +1,62 @@
 import React from 'react';
-import bookImg1 from '../assets/image/bookImg1.jpeg';
-import bookImg2 from '../assets/image/bookImg2.jpeg';
-import bookImg3 from '../assets/image/bookImg3.jpeg';
-import bookImg4 from '../assets/image/bookImg4.jpeg';
-import bookImg5 from '../assets/image/bookImg5.jpeg';
-import bookImg6 from '../assets/image/bookImg6.jpeg';
-import bookImg7 from '../assets/image/bookImg7.jpeg';
-import bookImg8 from '../assets/image/bookImg8.jpeg';
-import bookImg9 from '../assets/image/bookImg9.jpeg';
+import movie1 from '../assets/image/1.jpg';
+import movie2 from '../assets/image/2.jpg';
+import movie3 from '../assets/image/3.jpg';
+import movie4 from '../assets/image/4.jpg';
+import movie5 from '../assets/image/5.jpg';
+import movie6 from '../assets/image/6.jpg';
+import movie7 from '../assets/image/7.jpg';
+import movie8 from '../assets/image/8.jpg';
+import movie9 from '../assets/image/9.jpg';
 import '../page/Movie.css';
 
 const Book = () => {
-    const bookImg = [
-        { src: bookImg1, title: '블루 아카이브', years:'2023', country: '한국', reservationRate: '36%', audience: '100만' },
-        { src: bookImg2, title: '하이큐', years:'2023', country: '한국', reservationRate: '36%', audience: '200만' },
-        { src: bookImg3, title: '나의 돈키호테', years:'2023', country: '한국', reservationRate: '36%', audience: '300만' },
-        { src: bookImg4, title: '전지적 푸바오 시점', years:'2023', country: '한국', reservationRate: '36%', audience: '400만' },
-        { src: bookImg5, title: '어덯게 살것인가', years:'2023', country: '한국', reservationRate: '36%', audience: '500만' },
-        { src: bookImg6, title: '하이큐', years:'2023', country: '한국', reservationRate: '36%', audience: '600만' },
-        { src: bookImg7, title: 'IDOLIST Seven', years:'2023', country: '한국', reservationRate: '36%', audience: '700만' },
-        { src: bookImg8, title: '제철 행복', years:'2023', country: '한국', reservationRate: '36%', audience: '800만' },
-        { src: bookImg9, title: 'IDOLIST Trigger', years:'2023', country: '한국', reservationRate: '36%', audience: '900만' },
+    const movies = [
+        { src: movie1, title: '범죄도시4', years:'2023', country: '한국', reservationRate: '36%', audience: '100만' },
+        { src: movie2, title: '쿵푸팬더4', years:'2023', country: '한국', reservationRate: '36%', audience: '200만' },
+        { src: movie3, title: '혹성탈출(새로운 시대)', years:'2023', country: '한국', reservationRate: '36%', audience: '300만' },
+        { src: movie4, title: '포켓몬스터(성도지방 이야기, 최종장)', years:'2023', country: '한국', reservationRate: '36%', audience: '400만' },
+        { src: movie5, title: '스턴트맨', years:'2023', country: '한국', reservationRate: '36%', audience: '500만' },
+        { src: movie6, title: '악마와의 토크쇼', years:'2023', country: '한국', reservationRate: '36%', audience: '600만' },
+        { src: movie7, title: '가필드 더 무비', years:'2023', country: '한국', reservationRate: '36%', audience: '700만' },
+        { src: movie8, title: '하이큐 극장판(쓰레기장의 결전)', years:'2023', country: '한국', reservationRate: '36%', audience: '800만' },
+        { src: movie9, title: '꼬마참새 리차드(신비한 보석 탐험대)', years:'2023', country: '한국', reservationRate: '36%', audience: '900만' },
     ];
 
     return (
         <>
             <div className='titleName'>박스오피스 순위</div>
             <div className="movieList">
-                {bookImg.map((bookImg, index) => (
+                {movies.map((movie, index) => (
                     <div key={index} className='movieItem'>
-                        <img src={bookImg.src} alt={bookImg.title} />
-                        <div className='content1'> {bookImg.title}</div>
-                        <div className='content2'>{bookImg.years} ・ {bookImg.country}</div>
-                        <div className='content3'>예매율 {bookImg.reservationRate} ・ 누적 관객 {bookImg.audience}</div>
+                        <img src={movie.src} alt={movie.title} />
+                        <div className='content1'> {movie.title}</div>
+                        <div className='content2'>{movie.years} ・ {movie.country}</div>
+                        <div className='content3'>예매율 {movie.reservationRate} ・ 누적 관객 {movie.audience}</div>
                     </div>
                 ))}
             </div>
             
             <div className='titleName'>공개 예정작</div>
             <div className="movieList">
-                {bookImg.map((bookImg, index) => (
+                {movies.map((movie, index) => (
                     <div key={index} className='movieItem'>
-                        <img src={bookImg.src} alt={bookImg.title} />
-                        <div className='content1'> {bookImg.title}</div>
-                        <div className='content2'>{bookImg.years} ・ {bookImg.country}</div>
-                        <div className='content3'>예매율 {bookImg.reservationRate} ・ 누적 관객 {bookImg.audience}</div>
+                        <img src={movie.src} alt={movie.title} />
+                        <div className='content1'> {movie.title}</div>
+                        <div className='content2'>{movie.years} ・ {movie.country}</div>
+                        <div className='content3'>예매율 {movie.reservationRate} ・ 누적 관객 {movie.audience}</div>
                     </div>
                 ))}
             </div>
 
             <div className='titleName'>왓챠 구매 순위</div>
             <div className="movieList">
-                {bookImg.map((bookImg, index) => (
+                {movies.map((movie, index) => (
                     <div key={index} className='movieItem'>
-                        <img src={bookImg.src} alt={bookImg.title} />
-                        <div className='content1'> {bookImg.title}</div>
-                        <div className='content2'>{bookImg.years} ・ {bookImg.country}</div>
-                        <div className='content3'>예매율 {bookImg.reservationRate} ・ 누적 관객 {bookImg.audience}</div>
+                        <img src={movie.src} alt={movie.title} />
+                        <div className='content1'> {movie.title}</div>
+                        <div className='content2'>{movie.years} ・ {movie.country}</div>
+                        <div className='content3'>예매율 {movie.reservationRate} ・ 누적 관객 {movie.audience}</div>
                     </div>
                 ))}
             </div>
