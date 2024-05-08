@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import { default as watcha } from '../../assets/image/icon_logo.png';
+import searchImg from '../../assets/image/icon_search.png';
 import Book from '../Book';
 import '../Header/Header.css';
 import Login from '../Login';
@@ -23,20 +24,27 @@ const Footer = () => {
           <div className='watchaLogo'>
             <img src={watcha} alt="watcha"></img>
           </div>
-          <div className='list1'><Link to="/movie">영화</Link></div>
-          <div className='list2'><Link to="/series">시리즈</Link></div>
-          <div className='list3'><Link to="/book">책</Link></div>
-          <div className='list4'><Link to="/webtoon">웹툰</Link></div>
+          <div className='menu'>
+            <Link to="/movie">영화</Link>
+            <Link to="/series">시리즈</Link>
+            <Link to="/book">책</Link>
+            <Link to="/webtoon">웹툰</Link>
+          </div>
 
-          <input
-            type="text"
-            placeholder="검색"
-            value={searchTerm}
-            onChange={handleSearchChange}
-            className="searchInput"
-          />
-          <Login />
-          <SignUp />
+          <div className="userControls">
+            <div className="searchContainer">
+              <img src={searchImg} alt="searchImg"></img>
+              <input
+                type="text"
+                placeholder="검색"
+                value={searchTerm}
+                onChange={handleSearchChange}
+                className="searchInput"
+              />
+            </div>
+            <Login />
+            <SignUp />
+          </div>
         </div>
 
         <Routes>
