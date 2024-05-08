@@ -16,7 +16,7 @@ const Footer = () => {
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
-
+  
   return (
     <Router>
       <>
@@ -49,6 +49,7 @@ const Footer = () => {
         </div>
 
         <Routes>
+          <Route path="/" element={<Movie />} /> {/* 기본 경로에 Movie 컴포넌트를 렌더링합니다. */}
           <Route path="/movie" element={<Movie />} />
           <Route path="/series" element={<Series />} />
           <Route path="/book" element={<Book />} />
