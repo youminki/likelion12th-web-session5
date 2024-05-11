@@ -11,11 +11,20 @@ const MovieDetail = () => {
         <div className="movieDetail">
             <h1 className="movieTitle">{movie.title}</h1>
             <img className="movieImg" src={movie.img} alt={movie.title} />
-            <p className="movieYear">Year: {movie.year}</p>
-            <p className="movieCountry">Country: {movie.country}</p>
-            <p className="movieAverage">Average: {movie.average}</p>
-            <p className="moviePercent">Percent: {movie.percent}</p>
-            <p className="movieAudience">Audience: {movie.audience}</p>
+            <section>
+                <div className='box1'>
+                    <p>평가하기</p>
+                </div>
+                <div className='box2'>
+                    <p>보고싶어요</p>
+                    <p>코멘트</p>
+                    <p>보는중</p>
+                    <p>더보기</p>
+                </div>
+            </section>
+            <div className='box3'>
+                <p className="movieContent">{movie.content}</p>
+            </div>
         </div>
     );
 };

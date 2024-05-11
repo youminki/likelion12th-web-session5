@@ -1,8 +1,36 @@
+/* * {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+} */
+
 .movieImg {
     vertical-align: top;
-    width: 200px;
+    width: 300px;
     min-height: 1px;
     opacity: 1;
     object-fit: cover;
     transition: opacity 420ms ease 0s;
+}
+
+
+.movieContent{
+    -webkit-text-size-adjust: 100%;
+    font-family: "Pretendard", "Apple SD Gothic Neo", "Nanum Gothic", "Malgun Gothic", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    color: rgb(140, 140, 140);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    white-space: pre-line;
+    margin: 20px 0px 30px;
+    min-height: 150px;
+}
+
+.box2{
+    display: block;
+    unicode-bidi: isolate;
 }
