@@ -1,0 +1,8 @@
+.movieImg {
+    vertical-align: top;
+    width: 200px;
+    min-height: 1px;
+    opacity: 1;
+    object-fit: cover;
+    transition: opacity 420ms ease 0s;
+}
