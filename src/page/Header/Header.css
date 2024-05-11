@@ -1,0 +1,195 @@
+.watchaLogo img {
+    width: 151px;
+    margin-left: 40px;
+}
+
+.watchaLogo {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgb(236, 240, 240);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(126, 126, 126);
+    outline: inherit;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+}
+
+
+.SignUpButton {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 500;
+    line-height: 20px;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 72px;
+    height: 32px;
+    background: transparent;
+    color: rgb(53, 53, 53);
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    padding: 5px 14px 6px;
+    border: 1px solid rgba(116, 116, 123, 0.5);
+    margin: 15px 0px;
+}
+
+.LoginButton {
+    cursor: pointer;
+    background: transparent;
+    color: rgb(116, 116, 123);
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    margin: 15px 0px;
+
+}
+
+.LogoImage {
+    width: 200px;
+}
+
+.CenterBlock {
+    display: flex;
+    justify-content: center;
+}
+
+.WrapIcon {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+}
+
+.Title {
+    font-weight: bolder;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.LoginRedButton {
+    width: 330px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #ff2f6e;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.Content {
+    margin: 15px 10px;
+}
+
+.LoginInput {
+    width: 330px;
+    height: 40px;
+    margin: 5px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+}
+
+.LoginInput::placeholder {
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.GrayLine {
+    width: 130px;
+    height: 1px;
+    background-color: #00000020;
+    margin-top: 10px;
+}
+
+.OrContent {
+    color: #8c8c8c;
+    font-size: 14px;
+    margin: 0 20px;
+}
+
+.LoginTip {
+    color: #8d8e8f;
+    background-color: #f7f7f7;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+
+
+.ModalBlock {
+    width: 350px;
+    height: 600px;
+    margin-top: 300px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.searchContainer {
+    position: relative;
+    width: 30%;
+    margin-left: 200px;
+}
+
+.searchContainer img {
+    position: absolute;
+    left: -140px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 460px;
+    height: 400px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.searchInput {
+    position: relative;
+    z-index: 2;
+    width: 262px;
+    right: 216px;
+    border-radius: 5px 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 39px;
+    padding: 7px 10px 8px 26px;
+    background-color: rgb(236, 240, 240);
+    margin-left: 200px;
+}
+
+
+.userControls {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Header.css */
+.header .menu {
+    display: flex;
+    justify-content: space-between;
+    min-width: 200px;
+    /* 최소 크기 설정 */
+    padding-left: 40px;
+    padding-top: 7px;
+}
+
+.header .menu a {
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+}

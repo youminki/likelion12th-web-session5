@@ -1,9 +1,14 @@
-import Main from './page/Main';
+import Footer from './page/Footer/Footer.js';
+import Header from './page/Header/Header.js';
 
 function App() {
+
+
   return (
     <>
-      <Main />
+      <Header />
+      
+      <Footer />
     </>
   );
 }
