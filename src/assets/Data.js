@@ -1,4 +1,5 @@
 import poster1 from '../assets/image/1.jpg';
+import poster10 from '../assets/image/10.jpg';
 import poster2 from '../assets/image/2.jpg';
 import poster3 from '../assets/image/3.jpg';
 import poster4 from '../assets/image/4.jpg';
@@ -7,7 +8,6 @@ import poster6 from '../assets/image/6.jpg';
 import poster7 from '../assets/image/7.jpg';
 import poster8 from '../assets/image/8.jpg';
 import poster9 from '../assets/image/9.jpg';
-import poster10 from '../assets/image/10.jpg';
 
 export const DATA = [
   {
