@@ -19,13 +19,12 @@ const MovieDetail = () => {
                             <div className='box2'>평가하기</div>
                         </div>
                         <div className='contentContainer'>
-                            <div className='content1'> {movie.average}</div>
+                            <div className='content4'> {movie.percent}</div>
                             <p>평균 별점</p>
                         </div>
                     </div>
-                    
+
                     <div className='box3'>
-                        
                         <p>보고싶어요</p>
                         <p>코멘트</p>
                         <p>보는중</p>
