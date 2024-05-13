@@ -13,6 +13,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    height: 60px;
     z-index: 100;
     background-color: rgb(236, 240, 240);
     display: flex;
@@ -178,12 +179,10 @@
     justify-content: space-around;
 }
 
-/* Header.css */
 .header .menu {
     display: flex;
     justify-content: space-between;
     min-width: 200px;
-    /* 최소 크기 설정 */
     padding-left: 40px;
     padding-top: 7px;
 }

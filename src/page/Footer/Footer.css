@@ -1,11 +1,12 @@
 .Footer {
     display: block;
-    position:absolute;
+    position:fixed;
     bottom: 0;
     box-sizing: border-box;
     width: 100%;
     background-color: black;
     color: white; 
+    
 }
 
 .highlight {
