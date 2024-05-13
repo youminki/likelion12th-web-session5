@@ -81,8 +81,7 @@
     align-items: center;
 }
 
-
-.box3 {
+.box2 {
     order: 3;
     display: flex; 
     justify-content: space-around;
@@ -95,4 +94,35 @@
 
 .ratingContainer:hover svg {
     fill: #F82C60; /* 마우스 오버시 색상 */
+}
+
+
+.content4{
+    position: relative;
+    justify-content: center;
+    display: flex;
+    color: #888;
+    font-size: 36px;
+}
+.content5{
+    position: relative;
+    justify-content: center;
+    display: flex;
+    color: #8c8c8c;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.icon {
+    position:relative;
+    justify-content: center;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 20px;
+    height: 20px;
+    
+    color: #8c8c8c;
+    text-align: center;
+    padding: 14px 0;
 }
