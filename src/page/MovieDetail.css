@@ -166,3 +166,80 @@
     overflow: hidden;
     margin-bottom: 20px;
 }
+
+
+.content1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 120px;
+    left: 0;
+    padding-left: 20px;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    color: #ffffff;
+    max-width: 1320px;
+    margin-right: 20px;
+
+}
+
+.content2 {
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    left: 0;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    color: #ffffff;
+    max-width: 1320px;
+    margin-right: 20px;
+
+}
+
+.content3 {
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    color: #ffffff;
+    max-width: 1320px;
+    margin-right: 20px;
+
+}
