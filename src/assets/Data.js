@@ -24,6 +24,7 @@ export const DATA = [
   },
   {
     rank: 2,
+    intro: 'https://an2-img.amz.wtchn.net/image/v2/M_bV0_6rea3bodsn40dGnw.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1Ua3lNSGd4TURnd2NUZ3dJbDBzSW5BaU9pSXZkakl2YzNSdmNtVXZhVzFoWjJVdk1UY3pNVGs0T0RJNE5UZzROak0zTUNKOS5aNzBQV0tpSThlOW9wQVlWYTQ5MGVfcjI3QnNLb2ZLZWJwSTllN3paejRF',
     img: poster2,
     title: '쿵푸팬더 4',
     year: '2024',
@@ -35,6 +36,7 @@ export const DATA = [
   },
   {
     rank: 3,
+    intro: 'https://an2-img.amz.wtchn.net/image/v2/FfvMwgBEdguTOuP7THx08w.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1Ua3lNSGd4TURnd2NUZ3dJbDBzSW5BaU9pSXZkakl2YzNSdmNtVXZhVzFoWjJVdk1qYzRPVEV3TkRRM05qVTVNRGt4SW4wLlF2bjZYSzVKUFlzTk1sMWhzNFQwVXVyT1hPUmEyX0l1SkNTbDNzQS1HUUk',
     img: poster3,
     title: '혹성탈출: 새로운 시대',
     year: '2024',
@@ -46,6 +48,7 @@ export const DATA = [
   },
   {
     rank: 4,
+    intro: 'https://an2-img.amz.wtchn.net/image/v2/-Gyk-5EB9I5LirY6WNZmJA.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1Ua3lNSGd4TURnd2NUZ3dJbDBzSW5BaU9pSXZkakl2YzNSdmNtVXZhVzFoWjJVdk5qZzJOakExT0Rjek1qRTFOelF4SW4wLkw0cjhwZXlhNzdob1FHa2s5cVZkN3k5ZmhwREJvd1B1RjhqMXE5eWJzSFU',
     img: poster4,
     title: '포켓몬스터: 성도지방 이야기, 최종장',
     year: '2001',
@@ -57,6 +60,7 @@ export const DATA = [
   },
   {
     rank: 5,
+    intro: 'https://an2-img.amz.wtchn.net/image/v2/M5Fdns7WTKKywS_KpIlWOg.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1Ua3lNSGd4TURnd2NUZ3dJbDBzSW5BaU9pSXZkakl2YzNSdmNtVXZhVzFoWjJVdk1Ua3pOamMyT1RjeU5EUXlPVGd6SW4wLnFTMk5CdEsySk1KT1hZbHI4SFZjQlBZalNIMHltYTBuQ01wS3F6T2VSMkE',
     img: poster5,
     title: '스턴트맨',
     year: '2024',
@@ -68,6 +72,7 @@ export const DATA = [
   },
   {
     rank: 6,
+    intro: 'https://an2-img.amz.wtchn.net/image/v2/m5IgoVghNmDmAhPoHdRl9Q.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1Ua3lNSGd4TURnd2NUZ3dJbDBzSW5BaU9pSXZkakl2YzNSdmNtVXZhVzFoWjJVdk1UazNPRFkxTkRjMU1qVXpORGMwTWlKOS5DWmtDOTVUdDJYc1BnYXJJcHNQaU04WGFscEF5blh2SFQ5MDlqLUE3ZXk0',
     img: poster6,
     title: '악마와의 토크쇼',
     year: '2023',
@@ -79,8 +84,8 @@ export const DATA = [
   },
   {
     rank: 7,
+    intro: 'https://an2-img.amz.wtchn.net/image/v2/46QnED_Y5vntLYB7mC4HoQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1Ua3lNSGd4TURnd2NUZ3dJbDBzSW5BaU9pSXZkakl2YzNSdmNtVXZhVzFoWjJVdk1UVTJNVE0yT1RnMk16VXdOVGsxTnlKOS4xaHNCck1FdVFZNm80NVNfZVlVUkwxVzZaSlE4Ym5HdF92aXBuTlUtSGlB',
     img: poster7,
-
     title: '가필드 더 무비',
     year: '2024',
     country: '영국',
@@ -91,6 +96,7 @@ export const DATA = [
   },
   {
     rank: 8,
+    intro: 'https://an2-img.amz.wtchn.net/image/v2/YP3vARVC743EYBS3JcpUFA.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1Ua3lNSGd4TURnd2NUZ3dJbDBzSW5BaU9pSXZkakl2YzNSdmNtVXZhVzFoWjJVdk1USTROVGt4TVRjeU5UUXpOREE1TUNKOS5WaVNyUVNrZjdlRC1mNGlZZWdWb3NVSGNlSUduMFZjdXZiWTBvTXNtRmQ0',
     img: poster8,
     title: '극장판 하이큐!! 쓰레기장의 결전',
     year: '2023',
@@ -102,6 +108,7 @@ export const DATA = [
   },
   {
     rank: 9,
+    intro: 'https://an2-img.amz.wtchn.net/image/v2/ZrIoZ20mbkZrIb7tyFHo0A.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1Ua3lNSGd4TURnd2NUZ3dJbDBzSW5BaU9pSXZkakl2YzNSdmNtVXZhVzFoWjJVdk5EY3dOVEExTkRjd09URTFNVEUxSW4wLlpyTnk5d213VHF5ZU94VzlNaVlSSmZpWXdUQTM1T1VXaW9sZnEwdWpsOFk',
     img: poster9,
     title: '꼬마참새 리차드: 신비한 보석 탐험대',
     year: '2023',
@@ -113,6 +120,7 @@ export const DATA = [
   },
   {
     rank: 10,
+    intro: 'https://an2-img.amz.wtchn.net/image/v2/OUlynHIDBMm50gc1nT-7Og.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1Ua3lNSGd4TURnd2NUZ3dJbDBzSW5BaU9pSXZkakl2YzNSdmNtVXZhVzFoWjJVdk1UWTBNemt6TnpZMU1qSTROemN3TURJME9DSjkueWV4MGdaMGVmcS1GbTFRdUpLeHdiSHZmQkdmbGc5VmVhUlB1NTZlS0tWRQ',
     img: poster10,
     title: '남은 인생 10년',
     year: '2022',
