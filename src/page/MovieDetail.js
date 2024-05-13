@@ -13,6 +13,7 @@ const MovieDetail = () => {
     return (
         <div className="movieDetail">
             <div className='Maincontainer1'>
+                <img className="introImg" src={movie.intro} alt={movie.title} />
                 <div className='lec1'> {movie.title}</div>
                 <div className='lec2'>{movie.year} ・ {movie.country}</div>
                 <div className='lec3'>예매율 {movie.percent} ・ 누적 관객 {movie.audience}</div>
