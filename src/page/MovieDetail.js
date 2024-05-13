@@ -26,10 +26,13 @@ const MovieDetail = () => {
                         </div>
                     </div>
                     <div className='box2'>
-                        <p className='content6'> <img src={Icon1} alt="Icon" className="icon" />보고싶어요</p>
-                        <p> <img src={Icon2} alt="Icon" className="icon" />코멘트</p>
-                        <p> <img src={Icon3} alt="Icon" className="icon" />보는중</p>
-                        <p> <img src={Icon4} alt="Icon" className="icon" />더보기</p>
+                        <div className='box3'>
+                            <p className='content6'> <img src={Icon1} alt="Icon" className="icon" /> 보고싶어요</p>
+                            <p className='content6'> <img src={Icon2} alt="Icon" className="icon" /> 코멘트</p>
+                            <p className='content6'> <img src={Icon3} alt="Icon" className="icon" /> 보는중</p>
+                            <p className='content6'> <img src={Icon4} alt="Icon" className="icon" /> 더보기</p>
+                        </div>
+
                     </div>
                 </div>
                 <section className='box4'>
