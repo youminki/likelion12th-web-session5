@@ -1,6 +1,6 @@
 .Footer {
     display: block;
-    position:relative;
+    position:absolute;
     bottom: 0;
     box-sizing: border-box;
     width: 100%;
