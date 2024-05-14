@@ -70,9 +70,8 @@ const MovieDetail = () => {
                             </div>
                             {modalOpen1 && (
                                 <div className='modal'>
-                                    <button onClick={closeModal} className="backButton"></button>
-                                    
                                     <div className="ButtonClass">
+                                        <div><button onClick={closeModal} className="backButton"></button></div>
                                         <div className="modalIcon"></div>
                                         <div className='modalContent'>
                                             내 보관함에 작품을 담으려면 로그인이 필요해요. 회원가입 혹은 로그인해주세요.
@@ -84,9 +83,8 @@ const MovieDetail = () => {
                             )}
                             {modalOpen2 && (
                                 <div className='modal'>
-                                <button onClick={closeModal} className="backButton"></button>
-                                
                                 <div className="ButtonClass">
+                                    <div><button onClick={closeModal} className="backButton"></button></div>
                                     <div className="modalIcon"></div>
                                     <div className='modalContent'>
                                         지금 회원가입 혹은 로그인하시고, 경험한 감동을 기록해보세요.
@@ -98,9 +96,8 @@ const MovieDetail = () => {
                         )}
                             {modalOpen3 && (
                                 <div className='modal'>
-                                <button onClick={closeModal} className="backButton"></button>
-                                
                                 <div className="ButtonClass">
+                                    <div><button onClick={closeModal} className="backButton"></button></div>
                                     <div className="modalIcon"></div>
                                     <div className='modalContent'>
                                         로그인이 필요한 기능이에요. 지금 회원가입 혹은 로그인하고 공통의 취향을 나눠보세요
@@ -112,8 +109,8 @@ const MovieDetail = () => {
                         )}
                             {modalOpen4 && (
                                 <div className='modal'>
-                                <button onClick={closeModal} className="backButton"></button>
                                 <div className="ButtonClass">
+                                    <div><button onClick={closeModal} className="backButton"></button></div>
                                     <div className="modalIcon"></div>
                                     <div className='modalContent'>
                                         로그인이 필요한 기능이에요. 지금 회원가입 혹은 로그인하고 공통의 취향을 나눠보세요
