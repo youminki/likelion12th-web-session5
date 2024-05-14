@@ -6,13 +6,12 @@ import Icon1 from '../assets/icon/icon1.png';
 import Icon2 from '../assets/icon/icon2.png';
 import Icon3 from '../assets/icon/icon3.png';
 import Icon4 from '../assets/icon/icon4.png';
-import '../page/Movie.css';
 import '../page/MovieDetail.css';
 
 const MovieDetail = () => {
     const { rank } = useParams();
     const movie = MovieDATA.find(m => m.rank === Number(rank));
-    
+
     const [modalOpen1, setModalOpen1] = useState(false);
     const [modalOpen2, setModalOpen2] = useState(false);
     const [modalOpen3, setModalOpen3] = useState(false);
@@ -37,6 +36,8 @@ const MovieDetail = () => {
         setModalOpen3(false);
         setModalOpen4(false);
     }
+
+
 
     return (
         <div className="movieDetail">
@@ -69,28 +70,59 @@ const MovieDetail = () => {
                             </div>
                             {modalOpen1 && (
                                 <div className='modal'>
-                                    <button onClick={closeModal}>닫기</button>
-                                    <div>보고싶어요 모달 창 내용</div>
+                                    <button onClick={closeModal} className="backButton"></button>
+                                    
+                                    <div className="ButtonClass">
+                                        <div className="modalIcon"></div>
+                                        <div className='modalContent'>
+                                            내 보관함에 작품을 담으려면 로그인이 필요해요. 회원가입 혹은 로그인해주세요.
+                                        </div>
+                                        <button className="SignupRedButton">회원가입</button>
+                                        <button className="LoginWhiteButton">로그인</button>
+                                    </div>
                                 </div>
                             )}
                             {modalOpen2 && (
                                 <div className='modal'>
-                                    <button onClick={closeModal}>닫기</button>
-                                    <div>코멘트 모달 창 내용</div>
+                                <button onClick={closeModal} className="backButton"></button>
+                                
+                                <div className="ButtonClass">
+                                    <div className="modalIcon"></div>
+                                    <div className='modalContent'>
+                                        지금 회원가입 혹은 로그인하시고, 경험한 감동을 기록해보세요.
+                                    </div>
+                                    <button className="SignupRedButton">회원가입</button>
+                                    <button className="LoginWhiteButton">로그인</button>
                                 </div>
-                            )}
+                            </div>
+                        )}
                             {modalOpen3 && (
                                 <div className='modal'>
-                                    <button onClick={closeModal}>닫기</button>
-                                    <div>보는중 모달 창 내용</div>
+                                <button onClick={closeModal} className="backButton"></button>
+                                
+                                <div className="ButtonClass">
+                                    <div className="modalIcon"></div>
+                                    <div className='modalContent'>
+                                        로그인이 필요한 기능이에요. 지금 회원가입 혹은 로그인하고 공통의 취향을 나눠보세요
+                                    </div>
+                                    <button className="SignupRedButton">회원가입</button>
+                                    <button className="LoginWhiteButton">로그인</button>
                                 </div>
-                            )}
+                            </div>
+                        )}
                             {modalOpen4 && (
                                 <div className='modal'>
-                                    <button onClick={closeModal}>닫기</button>
-                                    <div>더보기 모달 창 내용</div>
+                                <button onClick={closeModal} className="backButton"></button>
+                                <div className="ButtonClass">
+                                    <div className="modalIcon"></div>
+                                    <div className='modalContent'>
+                                        로그인이 필요한 기능이에요. 지금 회원가입 혹은 로그인하고 공통의 취향을 나눠보세요
+                                    </div>
+                                    <button className="SignupRedButton">회원가입</button>
+                                    <button className="LoginWhiteButton">로그인</button>
                                 </div>
-                            )}
+                            </div>
+                        )}
                             <section className='box4'>
                                 <p className="movieContent">{movie.content}</p>
                             </section>
@@ -98,8 +130,8 @@ const MovieDetail = () => {
                     </div>
                 </div>
             </div>
-            </div>            
-            );
+        </div>
+    );
 };
 
 export default MovieDetail;
