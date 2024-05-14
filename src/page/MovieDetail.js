@@ -225,144 +225,173 @@ const MovieDetail = () => {
                     <div className='comentContent1'>더보기</div>
                 </header>
                 <ul className='CommentMainbox'>
-                <li className='CommentSubbox'>
-                        <div className='boxC'>
-                            <div className='boxC1'>
-                                <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-                                
-                            </div>
-                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
-                            <div className='boxC3'>
-                                <div className='ddabong'></div>
-                                <div className='num'>255</div>
-                                <div className='chat'></div>
-                                <div className='num'>23</div>
-                            </div>
-                            <div className='boxC4'>좋아요</div>
-                        </div>
-                    </li>
                     <li className='CommentSubbox'>
                         <div className='boxC'>
                             <div className='boxC1'>
                                 <div>이동진 평론가</div>
                                 <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-                                
-                            </div>
-                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
-                            <div className='boxC3'>
-                                <div className='ddabong'></div>
-                                <div className='num'>255</div>
-                                <div className='chat'></div>
-                                <div className='num'>23</div>
-                            </div>
-                            <div className='boxC4'>좋아요</div>
-                        </div>
-                    </li>
-                    <li className='CommentSubbox'>
-                        <div className='boxC'>
-                            <div className='boxC1'>
-                                <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-                                
-                            </div>
-                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
-                            <div className='boxC3'>
-                                <div className='ddabong'></div>
-                                <div className='num'>255</div>
-                                <div className='chat'></div>
-                                <div className='num'>23</div>
-                            </div>
-                            <div className='boxC4'>좋아요</div>
-                        </div>
-                    </li>
-                    <li className='CommentSubbox'>
-                        <div className='boxC'>
-                            <div className='boxC1'>
-                                <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-                                
-                            </div>
-                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
-                            <div className='boxC3'>
-                                <div className='ddabong'></div>
-                                <div className='num'>255</div>
-                                <div className='chat'></div>
-                                <div className='num'>23</div>
-                            </div>
-                            <div className='boxC4'>좋아요</div>
-                        </div>
-                    </li>
-                    <li className='CommentSubbox'>
-                        <div className='boxC'>
-                            <div className='boxC1'>
-                                <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-                                
-                            </div>
-                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
-                            <div className='boxC3'>
-                                <div className='ddabong'></div>
-                                <div className='num'>255</div>
-                                <div className='chat'></div>
-                                <div className='num'>23</div>
-                            </div>
-                            <div className='boxC4'>좋아요</div>
-                        </div>
-                    </li>
-                    <li className='CommentSubbox'>
-                        <div className='boxC'>
-                            <div className='boxC1'>
-                                <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-                                
-                            </div>
-                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
-                            <div className='boxC3'>
-                                <div className='ddabong'></div>
-                                <div className='num'>255</div>
-                                <div className='chat'></div>
-                                <div className='num'>23</div>
-                            </div>
-                            <div className='boxC4'>좋아요</div>
-                        </div>
-                    </li>
-                    <li className='CommentSubbox'>
-                        <div className='boxC'>
-                            <div className='boxC1'>
-                                <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-                                
-                            </div>
-                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
-                            <div className='boxC3'>
-                                <div className='ddabong'></div>
-                                <div className='num'>255</div>
-                                <div className='chat'></div>
-                                <div className='num'>23</div>
-                            </div>
-                            <div className='boxC4'>좋아요</div>
-                        </div>
-                    </li>
-                    <li className='CommentSubbox'>
-                        <div className='boxC'>
-                            <div className='boxC1'>
-                                <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-                                
-                            </div>
-                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
-                            <div className='boxC3'>
-                                <div className='ddabong'></div>
-                                <div className='num'>255</div>
-                                <div className='chat'></div>
-                                <div className='num'>23</div>
-                            </div>
-                            <div className='boxC4'>좋아요</div>
-                        </div>
-                    </li>
 
+                            </div>
+                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
+                            <div className='boxC3'>
+                                <div className='ddabong'></div>
+                                <div className='num'>255</div>
+                                <div className='chat'></div>
+                                <div className='num'>23</div>
+                            </div>
+                            <div className='boxC4'>좋아요</div>
+                        </div>
+                    </li>
+                    <li className='CommentSubbox'>
+                        <div className='boxC'>
+                            <div className='boxC1'>
+                                <div>이동진 평론가</div>
+                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
+
+                            </div>
+                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
+                            <div className='boxC3'>
+                                <div className='ddabong'></div>
+                                <div className='num'>255</div>
+                                <div className='chat'></div>
+                                <div className='num'>23</div>
+                            </div>
+                            <div className='boxC4'>좋아요</div>
+                        </div>
+                    </li>
+                    <li className='CommentSubbox'>
+                        <div className='boxC'>
+                            <div className='boxC1'>
+                                <div>이동진 평론가</div>
+                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
+
+                            </div>
+                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
+                            <div className='boxC3'>
+                                <div className='ddabong'></div>
+                                <div className='num'>255</div>
+                                <div className='chat'></div>
+                                <div className='num'>23</div>
+                            </div>
+                            <div className='boxC4'>좋아요</div>
+                        </div>
+                    </li>
+                    <li className='CommentSubbox'>
+                        <div className='boxC'>
+                            <div className='boxC1'>
+                                <div>이동진 평론가</div>
+                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
+
+                            </div>
+                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
+                            <div className='boxC3'>
+                                <div className='ddabong'></div>
+                                <div className='num'>255</div>
+                                <div className='chat'></div>
+                                <div className='num'>23</div>
+                            </div>
+                            <div className='boxC4'>좋아요</div>
+                        </div>
+                    </li>
+                    <li className='CommentSubbox'>
+                        <div className='boxC'>
+                            <div className='boxC1'>
+                                <div>이동진 평론가</div>
+                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
+
+                            </div>
+                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
+                            <div className='boxC3'>
+                                <div className='ddabong'></div>
+                                <div className='num'>255</div>
+                                <div className='chat'></div>
+                                <div className='num'>23</div>
+                            </div>
+                            <div className='boxC4'>좋아요</div>
+                        </div>
+                    </li>
+                    <li className='CommentSubbox'>
+                        <div className='boxC'>
+                            <div className='boxC1'>
+                                <div>이동진 평론가</div>
+                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
+
+                            </div>
+                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
+                            <div className='boxC3'>
+                                <div className='ddabong'></div>
+                                <div className='num'>255</div>
+                                <div className='chat'></div>
+                                <div className='num'>23</div>
+                            </div>
+                            <div className='boxC4'>좋아요</div>
+                        </div>
+                    </li>
+                    <li className='CommentSubbox'>
+                        <div className='boxC'>
+                            <div className='boxC1'>
+                                <div>이동진 평론가</div>
+                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
+
+                            </div>
+                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
+                            <div className='boxC3'>
+                                <div className='ddabong'></div>
+                                <div className='num'>255</div>
+                                <div className='chat'></div>
+                                <div className='num'>23</div>
+                            </div>
+                            <div className='boxC4'>좋아요</div>
+                        </div>
+                    </li>
+                    <li className='CommentSubbox'>
+                        <div className='boxC'>
+                            <div className='boxC1'>
+                                <div>이동진 평론가</div>
+                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
+
+                            </div>
+                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
+                            <div className='boxC3'>
+                                <div className='ddabong'></div>
+                                <div className='num'>255</div>
+                                <div className='chat'></div>
+                                <div className='num'>23</div>
+                            </div>
+                            <div className='boxC4'>좋아요</div>
+                        </div>
+                    </li>
                 </ul>
+            </div>
+            <div className='Maincontainer4'>
+                <header className='galaryHeader'>갤러리</header>
+                <div className="galaryList">
+                    <div className='galaryItem'>
+                        <div className='galaryImg1'></div>
+                        <div className='galaryImg2'></div>
+                        <div className='galaryImg3'></div>
+                        <div className='galaryImg4'></div>
+                        <div className='galaryImg5'></div>
+                        <div className='galaryImg6'></div>
+                        <div className='galaryImg7'></div>
+                        <div className='galaryImg8'></div>
+                    </div>
+                </div>
+            </div>
+            <div className='Maincontainer4'>
+                <header className='galaryHeader'>동영상</header>
+                <div className="galaryList">
+                    <div className='galaryItem'>
+                    <div className='galaryImg1'></div>
+                        <div className='galaryImg2'></div>
+                        <div className='galaryImg3'></div>
+                        <div className='galaryImg4'></div>
+                        <div className='galaryImg5'></div>
+                        <div className='galaryImg6'></div>
+                        <div className='galaryImg7'></div>
+                        <div className='galaryImg8'></div>
+                    </div>
+                </div>
             </div>
         </div>
     );
