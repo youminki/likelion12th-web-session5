@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { DATA } from '../assets/Data.js';
+import { MovieDATA } from '../assets/Data.js';
 import Icon1 from '../assets/icon/icon1.png';
 import Icon2 from '../assets/icon/icon2.png';
 import Icon3 from '../assets/icon/icon3.png';
@@ -9,7 +9,7 @@ import '../page/Movie.css';
 import '../page/MovieDetail.css';
 const MovieDetail = () => {
     const { rank } = useParams();
-    const movie = DATA.find(m => m.rank === Number(rank));
+    const movie = MovieDATA.find(m => m.rank === Number(rank));
     return (
         <div className="movieDetail">
             <div className='Maincontainer1'>

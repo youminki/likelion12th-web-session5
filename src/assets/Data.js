@@ -9,7 +9,7 @@ import poster7 from '../assets/image/7.jpg';
 import poster8 from '../assets/image/8.jpg';
 import poster9 from '../assets/image/9.jpg';
 
-export const DATA = [
+export const MovieDATA = [
   {
     rank: 1,
     intro: 'https://an2-img.amz.wtchn.net/image/v2/uoobduBrKiJME7GG9lcQNQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1Ua3lNSGd4TURnd2NUZ3dJbDBzSW5BaU9pSXZkakl2YzNSdmNtVXZhVzFoWjJVdk9EZzJOakE0TnpFeU1qRTJNaUo5LnlvdXV6ZkI4cXByVkVuVU1yS0FXb1g2WlFWbVNZUTJ3X2VyejlseVNPbjg',

@@ -1,3 +1,13 @@
+.MainContainer{
+    position: relative;
+    color: rgb(41, 42, 50);
+    text-overflow: ellipsis;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: 100px;
+    margin-bottom: 300px;
+}
 .movieItem img {
     vertical-align: top;
     width: 200px;
