@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { MovieDATA } from '../assets/Data.js';
 import Icon1 from '../assets/icon/icon1.png';
@@ -7,9 +8,36 @@ import Icon3 from '../assets/icon/icon3.png';
 import Icon4 from '../assets/icon/icon4.png';
 import '../page/Movie.css';
 import '../page/MovieDetail.css';
+
 const MovieDetail = () => {
     const { rank } = useParams();
     const movie = MovieDATA.find(m => m.rank === Number(rank));
+    
+    const [modalOpen1, setModalOpen1] = useState(false);
+    const [modalOpen2, setModalOpen2] = useState(false);
+    const [modalOpen3, setModalOpen3] = useState(false);
+    const [modalOpen4, setModalOpen4] = useState(false);
+
+    const handleIconClick1 = () => {
+        setModalOpen1(true);
+    }
+    const handleIconClick2 = () => {
+        setModalOpen2(true);
+    }
+    const handleIconClick3 = () => {
+        setModalOpen3(true);
+    }
+    const handleIconClick4 = () => {
+        setModalOpen4(true);
+    }
+
+    const closeModal = () => {
+        setModalOpen1(false);
+        setModalOpen2(false);
+        setModalOpen3(false);
+        setModalOpen4(false);
+    }
+
     return (
         <div className="movieDetail">
             <div className='Maincontainer1'>
@@ -34,20 +62,44 @@ const MovieDetail = () => {
                         </div>
                         <div className='box2'>
                             <div className='box3'>
-                                <p className='content6'> <img src={Icon1} alt="Icon" className="icon" /> 보고싶어요</p>
-                                <p className='content6'> <img src={Icon2} alt="Icon" className="icon" /> 코멘트</p>
-                                <p className='content6'> <img src={Icon3} alt="Icon" className="icon" /> 보는중</p>
-                                <p className='content6'> <img src={Icon4} alt="Icon" className="icon" /> 더보기</p>
+                                <p className='content6'><img src={Icon1} alt="Icon" className="icon" onClick={handleIconClick1} /> 보고싶어요 </p>
+                                <p className='content6'> <img src={Icon2} alt="Icon" className="icon" onClick={handleIconClick2} /> 코멘트</p>
+                                <p className='content6'> <img src={Icon3} alt="Icon" className="icon" onClick={handleIconClick3} /> 보는중</p>
+                                <p className='content6'> <img src={Icon4} alt="Icon" className="icon" onClick={handleIconClick4} /> 더보기</p>
                             </div>
+                            {modalOpen1 && (
+                                <div className='modal'>
+                                    <button onClick={closeModal}>닫기</button>
+                                    <div>보고싶어요 모달 창 내용</div>
+                                </div>
+                            )}
+                            {modalOpen2 && (
+                                <div className='modal'>
+                                    <button onClick={closeModal}>닫기</button>
+                                    <div>코멘트 모달 창 내용</div>
+                                </div>
+                            )}
+                            {modalOpen3 && (
+                                <div className='modal'>
+                                    <button onClick={closeModal}>닫기</button>
+                                    <div>보는중 모달 창 내용</div>
+                                </div>
+                            )}
+                            {modalOpen4 && (
+                                <div className='modal'>
+                                    <button onClick={closeModal}>닫기</button>
+                                    <div>더보기 모달 창 내용</div>
+                                </div>
+                            )}
+                            <section className='box4'>
+                                <p className="movieContent">{movie.content}</p>
+                            </section>
                         </div>
-                        <section className='box4'>
-                            <p className="movieContent">{movie.content}</p>
-                        </section>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+            </div>            
+            );
 };
 
 export default MovieDetail;
