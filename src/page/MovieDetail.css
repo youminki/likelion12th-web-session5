@@ -547,7 +547,6 @@
 
 .boxC3{
     position: relative;
-    margin: 12px 0px 15px;
     padding: 2px 8px;
     display: flex;
     -webkit-box-align: center;
@@ -576,6 +575,7 @@
     margin: 0px 3px;
 }
 .boxC4{
+    
     position: relative;
     background: none;
     border: none;
@@ -586,7 +586,7 @@
     font-weight: 400;
     letter-spacing: -0.7px;
     line-height: 22px;
-    padding: 2px 18px;
+    padding: 12px 18px;
 }
 
 .chat{
