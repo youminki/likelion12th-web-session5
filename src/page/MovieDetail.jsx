@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { MovieDATA } from '../assets/Data.js';
@@ -6,44 +5,31 @@ import Icon1 from '../assets/icon/icon1.png';
 import Icon2 from '../assets/icon/icon2.png';
 import Icon3 from '../assets/icon/icon3.png';
 import Icon4 from '../assets/icon/icon4.png';
+import Modal from '../components/Modal2.jsx'; // 공통 모달 컴포넌트
 import '../page/MovieDetail.css';
 
 const MovieDetail = () => {
     const { rank } = useParams();
     const movie = MovieDATA.find(m => m.rank === Number(rank));
 
-    const [modalOpen1, setModalOpen1] = useState(false);
-    const [modalOpen2, setModalOpen2] = useState(false);
-    const [modalOpen3, setModalOpen3] = useState(false);
-    const [modalOpen4, setModalOpen4] = useState(false);
+    const [modalContent, setModalContent] = useState('');
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleIconClick1 = () => {
-        setModalOpen1(true);
-    }
-    const handleIconClick2 = () => {
-        setModalOpen2(true);
-    }
-    const handleIconClick3 = () => {
-        setModalOpen3(true);
-    }
-    const handleIconClick4 = () => {
-        setModalOpen4(true);
-    }
+    const handleIconClick = (content) => {
+        setModalContent(content);
+        setIsModalOpen(true);
+    };
 
     const closeModal = () => {
-        setModalOpen1(false);
-        setModalOpen2(false);
-        setModalOpen3(false);
-        setModalOpen4(false);
-    }
-
-
+        setIsModalOpen(false);
+        setModalContent('');
+    };
 
     return (
         <div className="movieDetail">
             <div className='Maincontainer1'>
                 <img className="introImg" src={movie.intro} alt={movie.title} />
-                <div className='lec1'> {movie.title}</div>
+                <div className='lec1'>{movie.title}</div>
                 <div className='lec2'>{movie.year} ・ {movie.country}</div>
                 <div className='lec3'>예매율 {movie.percent} ・ 누적 관객 {movie.audience}</div>
             </div>
@@ -57,69 +43,18 @@ const MovieDetail = () => {
                                 <div className='content5'>평가하기</div>
                             </div>
                             <div className='contentContainer'>
-                                <div className='content4'> {movie.average}</div>
+                                <div className='content4'>{movie.average}</div>
                                 <div className='content5'>평균 별점</div>
                             </div>
                         </div>
                         <div className='box2'>
                             <div className='box3'>
-                                <p className='content6'><img src={Icon1} alt="Icon" className="icon" onClick={handleIconClick1} /> 보고싶어요 </p>
-                                <p className='content6'> <img src={Icon2} alt="Icon" className="icon" onClick={handleIconClick2} /> 코멘트</p>
-                                <p className='content6'> <img src={Icon3} alt="Icon" className="icon" onClick={handleIconClick3} /> 보는중</p>
-                                <p className='content6'> <img src={Icon4} alt="Icon" className="icon" onClick={handleIconClick4} /> 더보기</p>
+                                <p className='content6'><img src={Icon1} alt="Icon" className="icon" onClick={() => handleIconClick("내 보관함에 작품을 담으려면 로그인이 필요해요. 회원가입 혹은 로그인해주세요.")} /> 보고싶어요 </p>
+                                <p className='content6'> <img src={Icon2} alt="Icon" className="icon" onClick={() => handleIconClick("지금 회원가입 혹은 로그인하시고, 경험한 감동을 기록해보세요.")} /> 코멘트</p>
+                                <p className='content6'> <img src={Icon3} alt="Icon" className="icon" onClick={() => handleIconClick("로그인이 필요한 기능이에요. 지금 회원가입 혹은 로그인하고 공통의 취향을 나눠보세요")} /> 보는중</p>
+                                <p className='content6'> <img src={Icon4} alt="Icon" className="icon" onClick={() => handleIconClick("로그인이 필요한 기능이에요. 지금 회원가입 혹은 로그인하고 공통의 취향을 나눠보세요")} /> 더보기</p>
                             </div>
-                            {modalOpen1 && (
-                                <div className='modal'>
-                                    <div className="ButtonClass">
-                                        <div><button onClick={closeModal} className="backButton"></button></div>
-                                        <div className="modalIcon"></div>
-                                        <div className='modalContent'>
-                                            내 보관함에 작품을 담으려면 로그인이 필요해요. 회원가입 혹은 로그인해주세요.
-                                        </div>
-                                        <button className="SignupRedButton">회원가입</button>
-                                        <button className="LoginWhiteButton">로그인</button>
-                                    </div>
-                                </div>
-                            )}
-                            {modalOpen2 && (
-                                <div className='modal'>
-                                    <div className="ButtonClass">
-                                        <div><button onClick={closeModal} className="backButton"></button></div>
-                                        <div className="modalIcon"></div>
-                                        <div className='modalContent'>
-                                            지금 회원가입 혹은 로그인하시고, 경험한 감동을 기록해보세요.
-                                        </div>
-                                        <button className="SignupRedButton">회원가입</button>
-                                        <button className="LoginWhiteButton">로그인</button>
-                                    </div>
-                                </div>
-                            )}
-                            {modalOpen3 && (
-                                <div className='modal'>
-                                    <div className="ButtonClass">
-                                        <div><button onClick={closeModal} className="backButton"></button></div>
-                                        <div className="modalIcon"></div>
-                                        <div className='modalContent'>
-                                            로그인이 필요한 기능이에요. 지금 회원가입 혹은 로그인하고 공통의 취향을 나눠보세요
-                                        </div>
-                                        <button className="SignupRedButton">회원가입</button>
-                                        <button className="LoginWhiteButton">로그인</button>
-                                    </div>
-                                </div>
-                            )}
-                            {modalOpen4 && (
-                                <div className='modal'>
-                                    <div className="ButtonClass">
-                                        <div><button onClick={closeModal} className="backButton"></button></div>
-                                        <div className="modalIcon"></div>
-                                        <div className='modalContent'>
-                                            로그인이 필요한 기능이에요. 지금 회원가입 혹은 로그인하고 공통의 취향을 나눠보세요
-                                        </div>
-                                        <button className="SignupRedButton">회원가입</button>
-                                        <button className="LoginWhiteButton">로그인</button>
-                                    </div>
-                                </div>
-                            )}
+                            <Modal isOpen={isModalOpen} closeModal={closeModal} modalContent={modalContent} />
                             <section className='box4'>
                                 <p className="movieContent">{movie.content}</p>
                             </section>
@@ -229,8 +164,8 @@ const MovieDetail = () => {
                         <div className='boxC'>
                             <div className='boxC1'>
                                 <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-
+                                <div className='starBox'>
+                                    <img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
                             </div>
                             <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
                             <div className='boxC3'>
@@ -246,8 +181,8 @@ const MovieDetail = () => {
                         <div className='boxC'>
                             <div className='boxC1'>
                                 <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-
+                                <div className='starBox'>
+                                    <img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
                             </div>
                             <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
                             <div className='boxC3'>
@@ -263,8 +198,8 @@ const MovieDetail = () => {
                         <div className='boxC'>
                             <div className='boxC1'>
                                 <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-
+                                <div className='starBox'>
+                                    <img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
                             </div>
                             <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
                             <div className='boxC3'>
@@ -280,8 +215,8 @@ const MovieDetail = () => {
                         <div className='boxC'>
                             <div className='boxC1'>
                                 <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-
+                                <div className='starBox'>
+                                    <img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
                             </div>
                             <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
                             <div className='boxC3'>
@@ -297,8 +232,8 @@ const MovieDetail = () => {
                         <div className='boxC'>
                             <div className='boxC1'>
                                 <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-
+                                <div className='starBox'>
+                                    <img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
                             </div>
                             <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
                             <div className='boxC3'>
@@ -314,42 +249,8 @@ const MovieDetail = () => {
                         <div className='boxC'>
                             <div className='boxC1'>
                                 <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-
-                            </div>
-                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
-                            <div className='boxC3'>
-                                <div className='ddabong'></div>
-                                <div className='num'>255</div>
-                                <div className='chat'></div>
-                                <div className='num'>23</div>
-                            </div>
-                            <div className='boxC4'>좋아요</div>
-                        </div>
-                    </li>
-                    <li className='CommentSubbox'>
-                        <div className='boxC'>
-                            <div className='boxC1'>
-                                <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-
-                            </div>
-                            <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
-                            <div className='boxC3'>
-                                <div className='ddabong'></div>
-                                <div className='num'>255</div>
-                                <div className='chat'></div>
-                                <div className='num'>23</div>
-                            </div>
-                            <div className='boxC4'>좋아요</div>
-                        </div>
-                    </li>
-                    <li className='CommentSubbox'>
-                        <div className='boxC'>
-                            <div className='boxC1'>
-                                <div>이동진 평론가</div>
-                                <div className='starBox'><img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
-
+                                <div className='starBox'>
+                                    <img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px"></img>4.5</div>
                             </div>
                             <div className='boxC2'>익숨함에서 진부함으로 넘어가는 고개 너머에서 뚝딱.</div>
                             <div className='boxC3'>
@@ -382,7 +283,7 @@ const MovieDetail = () => {
                 <header className='galaryHeader'>동영상</header>
                 <div className="galaryList">
                     <div className='galaryItem'>
-                    <div className='galaryImg1'></div>
+                        <div className='galaryImg1'></div>
                         <div className='galaryImg2'></div>
                         <div className='galaryImg3'></div>
                         <div className='galaryImg4'></div>
