@@ -4,8 +4,8 @@ import kakao from '../assets/image/icon_kakao.png';
 import line from '../assets/image/icon_line.png';
 import { default as logo } from '../assets/image/icon_logo.png';
 import twitter from '../assets/image/icon_twitter.png';
-import Modal from '../components/Modal';
-import '../page/Header/Header.css';
+import '../components/Header/Header.css';
+import Modal from './Modal';
 
 const SignUp = () => {
   const [signUpModalOpen, setSignUpModalOpen] = useState(false);

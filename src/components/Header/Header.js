@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import { default as watcha } from '../../assets/image/icon_logo.png';
 import searchImg from '../../assets/image/icon_search.png';
-import Book from '../Book';
-import '../Header/Header.css';
+import Book from '../../page/Book';
+import Movie from '../../page/Main';
+import Series from '../../page/Series';
+import Webtoon from '../../page/Webtoon';
 import Login from '../Login';
-import Movie from '../Movie';
-import Series from '../Series';
 import SignUp from '../SignUp';
-import Webtoon from '../Webtoon';
+import './Header.css';
 
 const Footer = () => {
   const [searchTerm, setSearchTerm] = useState('');

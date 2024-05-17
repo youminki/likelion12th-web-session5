@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BookDATA } from '../assets/Data.js';
-import '../page/Movie.css';
+import '../page/StyleComponents.css';
 
 const Book = () => {
     return (
