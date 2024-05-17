@@ -16,10 +16,11 @@ const GalleryHeader = styled.header`
 `;
 
 const GalleryList = styled.div`
-    display: flex;
+    
     overflow-x: auto;
     white-space: nowrap;
     margin-top: 42px;
+
 `;
 
 const GalleryImg = styled.div`
@@ -37,7 +38,7 @@ const GalleryImg = styled.div`
 const Gallery = ({ header, images }) => (
     <MainContainer4>
         <GalleryHeader>{header}</GalleryHeader>
-        <GalleryList>
+        <GalleryList className="scrollable">
             {images.map((image, index) => (
                 <GalleryImg key={index} style={{ backgroundImage: `url(${image})` }} />
             ))}

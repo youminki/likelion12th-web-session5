@@ -6,7 +6,6 @@ import commonTasteIcon from '../../assets/icon/icon3.png';
 import moreDetailsIcon from '../../assets/icon/icon4.png';
 
 const Box3 = styled.div`
-    order: 3;
     display: flex;
     justify-content: center;
     width: 100%;
