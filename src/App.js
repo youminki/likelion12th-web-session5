@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer/Footer.js';
 import Header from './components/Header/Header.js';
-import MovieDetail from './components/MovieDetail/MovieDetail.jsx';
 import Movie from './page/Main';
+import MovieDetail from './page/MovieDetail.jsx';
 function App() {
   return (
     <>

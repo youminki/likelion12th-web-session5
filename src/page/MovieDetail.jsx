@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import { MovieDATA } from '../../assets/Data.js';
-import Modal from '../Modal2.jsx';
-import CastList from '../MovieDetail/CastList.jsx';
-import Comments from '../MovieDetail/Comments.jsx';
-import Gallery from '../MovieDetail/Gallery.jsx';
-import MovieActions from '../MovieDetail/MovieActions.jsx';
-import MovieInfo from '../MovieDetail/MovieInfo.jsx';
-import Rating from '../MovieDetail/Rating.jsx';
+import { MovieDATA } from '../assets/Data.js';
+import Modal from '../components/Modal2.jsx';
+import CastList from '../components/MovieDetail/CastList.jsx';
+import Comments from '../components/MovieDetail/Comments.jsx';
+import Gallery from '../components/MovieDetail/Gallery.jsx';
+import MovieActions from '../components/MovieDetail/MovieActions.jsx';
+import MovieInfo from '../components/MovieDetail/MovieInfo.jsx';
+import Rating from '../components/MovieDetail/Rating.jsx';
 
 
 const MainContainer2 = styled.div`
