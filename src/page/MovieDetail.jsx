@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { MovieDATA } from '../assets/Data.js';
-import Icon1 from '../assets/icon/icon1.png';
-import Icon2 from '../assets/icon/icon2.png';
-import Icon3 from '../assets/icon/icon3.png';
-import Icon4 from '../assets/icon/icon4.png';
+import containmentIcon from '../assets/icon/icon1.png';
+import experienceRecordIcon from '../assets/icon/icon2.png';
+import commonTasteIcon from '../assets/icon/icon3.png';
+import moreDetailsIcon from '../assets/icon/icon4.png';
 import Modal from '../components/Modal2.jsx'; // 공통 모달 컴포넌트
 import '../page/MovieDetail.css';
 
@@ -49,10 +49,10 @@ const MovieDetail = () => {
                         </div>
                         <div className='box2'>
                             <div className='box3'>
-                                <p className='content6'><img src={Icon1} alt="Icon" className="icon" onClick={() => handleIconClick("내 보관함에 작품을 담으려면 로그인이 필요해요. 회원가입 혹은 로그인해주세요.")} /> 보고싶어요 </p>
-                                <p className='content6'> <img src={Icon2} alt="Icon" className="icon" onClick={() => handleIconClick("지금 회원가입 혹은 로그인하시고, 경험한 감동을 기록해보세요.")} /> 코멘트</p>
-                                <p className='content6'> <img src={Icon3} alt="Icon" className="icon" onClick={() => handleIconClick("로그인이 필요한 기능이에요. 지금 회원가입 혹은 로그인하고 공통의 취향을 나눠보세요")} /> 보는중</p>
-                                <p className='content6'> <img src={Icon4} alt="Icon" className="icon" onClick={() => handleIconClick("로그인이 필요한 기능이에요. 지금 회원가입 혹은 로그인하고 공통의 취향을 나눠보세요")} /> 더보기</p>
+                                <p className='content6'><img src={containmentIcon} alt="Icon" className="icon" onClick={() => handleIconClick("내 보관함에 작품을 담으려면 로그인이 필요해요. 회원가입 혹은 로그인해주세요.")} /> 보고싶어요 </p>
+                                <p className='content6'> <img src={experienceRecordIcon} alt="Icon" className="icon" onClick={() => handleIconClick("지금 회원가입 혹은 로그인하시고, 경험한 감동을 기록해보세요.")} /> 코멘트</p>
+                                <p className='content6'> <img src={commonTasteIcon} alt="Icon" className="icon" onClick={() => handleIconClick("로그인이 필요한 기능이에요. 지금 회원가입 혹은 로그인하고 공통의 취향을 나눠보세요")} /> 보는중</p>
+                                <p className='content6'> <img src={moreDetailsIcon} alt="Icon" className="icon" onClick={() => handleIconClick("로그인이 필요한 기능이에요. 지금 회원가입 혹은 로그인하고 공통의 취향을 나눠보세요")} /> 더보기</p>
                             </div>
                             <Modal isOpen={isModalOpen} closeModal={closeModal} modalContent={modalContent} />
                             <section className='box4'>
