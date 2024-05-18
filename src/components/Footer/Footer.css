@@ -1,19 +1,25 @@
 .Footer {
     display: block;
-    position:relative;
+    position: relative;
     bottom: 0;
     box-sizing: border-box;
     width: 100%;
     background-color: black;
-    color: white; 
+    color: white;
+    min-width: 719px;
 }
+
 
 .highlight {
     color: rgb(255, 5, 88);
 }
 
-.li1, .li2, .li3, .li4, .li5 {
-    
+.li1,
+.li2,
+.li3,
+.li4,
+.li5 {
+
     list-style: none;
     padding-left: 50px;
     padding-bottom: 10px;
@@ -24,7 +30,8 @@
     color: rgb(132, 132, 133);
 }
 
-.star{
+.star {
+
     padding-top: 30px;
     color: #d1d1d2;
     font-size: 19px;

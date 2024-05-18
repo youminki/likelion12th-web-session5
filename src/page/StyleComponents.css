@@ -1,3 +1,13 @@
+.MainContainer{
+    position: relative;
+    color: rgb(41, 42, 50);
+    text-overflow: ellipsis;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: 100px;
+    margin-bottom: 300px;
+}
 .movieItem img {
     vertical-align: top;
     width: 200px;
@@ -6,7 +16,8 @@
     object-fit: cover;
     transition: opacity 420ms ease 0s;
 }
-.movieList{
+
+.movieList {
     display: flex;
     position: relative;
     flex-wrap: nowrap;
@@ -16,7 +27,7 @@
 }
 
 
-.titleName{
+.titleName {
     position: relative;
     color: rgb(41, 42, 50);
     text-overflow: ellipsis;
@@ -27,13 +38,14 @@
     margin: 42px;
     margin-bottom: -50px;
 }
+
 .movieList {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-  }
+}
 
-.content1{
+.content1 {
     color: rgb(41, 42, 50);
     font-size: 16px;
     font-weight: 500;
@@ -45,7 +57,7 @@
     margin-bottom: 3px;
 }
 
-.content2{
+.content2 {
     color: rgb(41, 42, 50);
     padding-bottom: 1px;
     font-size: 14px;
@@ -54,7 +66,7 @@
     line-height: 21px;
 }
 
-.content3{
+.content3 {
     color: rgb(116, 116, 123);
     white-space: normal;
     font-size: 13px;

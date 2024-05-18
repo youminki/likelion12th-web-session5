@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import { default as watcha } from '../../assets/image/icon_logo.png';
 import searchImg from '../../assets/image/icon_search.png';
-import Book from '../Book';
-import '../Header/Header.css';
+import Book from '../../page/Book';
+import Movie from '../../page/Main';
+import Series from '../../page/Series';
+import Webtoon from '../../page/Webtoon';
 import Login from '../Login';
-import Movie from '../Movie';
-import Series from '../Series';
 import SignUp from '../SignUp';
-import Webtoon from '../Webtoon';
+import './Header.css';
 
 const Footer = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
 
         <Routes>
-          <Route path="/" element={<Movie />} /> {/* 기본 경로에 Movie 컴포넌트를 렌더링합니다. */}
+          <Route path="/" element={<Movie />} />
           <Route path="/movie" element={<Movie />} />
           <Route path="/series" element={<Series />} />
           <Route path="/book" element={<Book />} />
