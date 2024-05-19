@@ -79,9 +79,10 @@ const BoxC1 = styled.div`
 
 const BoxC2 = styled.div`
     position: relative;
-    height: 120px;
+    height: 300px;
     margin: 12px 0px 15px;
     padding: 2px 8px;
+    overflow-y: auto;
 `;
 
 const BoxC3 = styled.div`

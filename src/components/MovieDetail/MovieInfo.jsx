@@ -75,9 +75,9 @@ const Lec3 = styled.div`
     margin-right: 20px;
 `;
 
-const MovieInfo = ({ movie }) => (
+const MovieInfo = ({ movie, introImage }) => (
     <MainContainer1>
-        <IntroImg className="introImg" src={movie.intro} alt={movie.title} />
+        <IntroImg className="introImg" src={`https://image.tmdb.org/t/p/w500${introImage}`} alt={movie.title} />
         <Lec1>{movie.title}</Lec1>
         <Lec2>{movie.year} ・ {movie.country}</Lec2>
         <Lec3>예매율 {movie.percent} ・ 누적 관객 {movie.audience}</Lec3>
