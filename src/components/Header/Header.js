@@ -10,7 +10,7 @@ import Login from '../Login';
 import SignUp from '../SignUp';
 import './Header.css';
 
-const Footer = () => {
+const Header = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearchChange = (event) => {
@@ -60,4 +60,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Header;
