@@ -92,7 +92,7 @@ const Movie = ({ movies }) => {
             <MovieList className="scrollable">
                 {movies.map((movie) => (
                     <MovieItem key={movie.rank}>
-                        <Link to={`/movie/${movie.rank}`}>
+                        <Link to={`/movie/${movie.id}`}>
                             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                         </Link>
                         <Content1>{movie.title}</Content1>
@@ -105,7 +105,7 @@ const Movie = ({ movies }) => {
             <MovieList className="scrollable">
                 {movies.slice(0, 5).map((movie) => (
                     <MovieItem key={movie.rank}>
-                        <Link to={`/movie/${movie.rank}`}>
+                        <Link to={`/movie/${movie.id}`}>
                             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                         </Link>
                         <Content1>{movie.title}</Content1>
@@ -118,7 +118,7 @@ const Movie = ({ movies }) => {
             <MovieList className="scrollable">
                 {movies.slice(5, 10).map((movie) => (
                     <MovieItem key={movie.rank}>
-                        <Link to={`/movie/${movie.rank}`}>
+                        <Link to={`/movie/${movie.id}`}>
                             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                         </Link>
                         <Content1>{movie.title}</Content1>
