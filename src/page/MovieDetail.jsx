@@ -20,7 +20,7 @@ const MainContainer2 = styled.div`
 const MovieImg = styled.img`
     order: 1;
     width: 300px;
-    height: 450px;
+    height: 300px;
     margin: 20px;
     border: 2px solid #d9d9d9;
 `;

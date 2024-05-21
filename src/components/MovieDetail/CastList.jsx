@@ -19,12 +19,22 @@ const UlContainer = styled.div`
     padding-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 20px;
     box-sizing: border-box;
-    width: 100%;
+    width: calc(100% - 70px);
     border-bottom: 1px solid rgb(240, 240, 240);
-    
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: calc(4 * 170px);
+    white-space: nowrap;
+
+    & > div {
+        min-width: 150px;
+        min-height: 150px;
+    }
 `;
+
 
 const Picture = styled.img`
     width: 80px;
