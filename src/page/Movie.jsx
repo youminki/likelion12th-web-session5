@@ -1,5 +1,4 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -82,38 +81,18 @@ const Content3 = styled.div`
     margin-top: 5px;
 `;
 
-const Movie = () => {
-    const [movies, setMovies] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchMovies = async () => {
-            const apiKey = process.env.REACT_APP_TMDB_API_KEY;
-            const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=ko-KR&page=1`;
-            try {
-                const response = await axios.get(url);
-                setMovies(response.data.results);
-                setIsLoading(false);
-            } catch (error) {
-                console.error("Error fetching movie data:", error);
-                setIsLoading(false);
-            }
-        };
-
-        fetchMovies();
-    }, []);
-
-    if (isLoading) {
-        return <p>Loading...</p>;
+const Movie = ({ movies }) => {
+    if (!movies || movies.length === 0) {
+        return <p>No movies available</p>;
     }
 
     return (
         <MainContainer>
             <TitleName>박스오피스 순위</TitleName>
             <MovieList className="scrollable">
-                {movies.map((movie, index) => (
-                    <MovieItem key={index}>
-                        <Link to={`/movie/${movie.id}`}>
+                {movies.map((movie) => (
+                    <MovieItem key={movie.rank}>
+                        <Link to={`/movie/${movie.rank}`}>
                             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                         </Link>
                         <Content1>{movie.title}</Content1>
@@ -124,9 +103,9 @@ const Movie = () => {
             </MovieList>
             <TitleName>공개 예정작</TitleName>
             <MovieList className="scrollable">
-                {movies.slice(0, 5).map((movie, index) => (
-                    <MovieItem key={index}>
-                        <Link to={`/movie/${movie.id}`}>
+                {movies.slice(0, 5).map((movie) => (
+                    <MovieItem key={movie.rank}>
+                        <Link to={`/movie/${movie.rank}`}>
                             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                         </Link>
                         <Content1>{movie.title}</Content1>
@@ -137,9 +116,9 @@ const Movie = () => {
             </MovieList>
             <TitleName>왓챠 구매 순위</TitleName>
             <MovieList className="scrollable">
-                {movies.slice(5, 10).map((movie, index) => (
-                    <MovieItem key={index}>
-                        <Link to={`/movie/${movie.id}`}>
+                {movies.slice(5, 10).map((movie) => (
+                    <MovieItem key={movie.rank}>
+                        <Link to={`/movie/${movie.rank}`}>
                             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                         </Link>
                         <Content1>{movie.title}</Content1>
