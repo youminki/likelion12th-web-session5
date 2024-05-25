@@ -10,6 +10,7 @@ import Comments from '../components/MovieDetail/Comments.jsx';
 import Gallery from '../components/MovieDetail/Gallery.jsx';
 import MovieActions from '../components/MovieDetail/MovieActions.jsx';
 import MovieInfo from '../components/MovieDetail/MovieInfo.jsx';
+import Poster from '../components/MovieDetail/Poster.jsx';
 import Rating from '../components/MovieDetail/Rating.jsx';
 
 const MainContainer2 = styled.div`
@@ -165,7 +166,7 @@ const MovieDetail = () => {
                 <CastList cast={cast} />
                 <Comments comments={comments.map(comment => ({ author: comment.author, text: comment.content }))} />
                 <Gallery header="Gallery" images={images.map(img => `https://image.tmdb.org/t/p/w500${img.file_path}`)} />
-                <Gallery header="비슷한 작품" images={topRatedMovies.map(movie => `https://image.tmdb.org/t/p/w500${movie.poster_path}`)} />
+                <Poster header="비슷한 작품" images={topRatedMovies} />
             </ContentContainer>
         </div>
     );
