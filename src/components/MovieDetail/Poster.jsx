@@ -1,6 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+const Poster = ({ header, images }) => (
+    <MainContainer4>
+        <PosterHeader>{header}</PosterHeader>
+        <PosterList className="scrollable">
+            {images.map((movie, index) => (
+                <PosterItemContainer key={index}>
+                    <PosterItem style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie.poster_path})` }} />
+                    <PosterInfo>
+                        <PosterTitle>{movie.title}</PosterTitle>
+                        <PosterRating>평균 ★ {movie.vote_average.toFixed(1)}</PosterRating>
+                    </PosterInfo>
+                </PosterItemContainer>
+            ))}
+        </PosterList>
+    </MainContainer4>
+);
+
+export default Poster;
+
 const MainContainer4 = styled.div`
     padding-left: 50px;
 `;
@@ -61,22 +81,3 @@ const PosterRating = styled.div`
     font-size: 14px;
     color: gray;
 `;
-
-const Poster = ({ header, images }) => (
-    <MainContainer4>
-        <PosterHeader>{header}</PosterHeader>
-        <PosterList className="scrollable">
-            {images.map((movie, index) => (
-                <PosterItemContainer key={index}>
-                    <PosterItem style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie.poster_path})` }} />
-                    <PosterInfo>
-                        <PosterTitle>{movie.title}</PosterTitle>
-                        <PosterRating>평균 ★ {movie.vote_average.toFixed(1)}</PosterRating>
-                    </PosterInfo>
-                </PosterItemContainer>
-            ))}
-        </PosterList>
-    </MainContainer4>
-);
-
-export default Poster;

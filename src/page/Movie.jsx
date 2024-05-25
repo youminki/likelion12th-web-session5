@@ -2,6 +2,65 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+const Movie = ({ movies }) => {
+    if (!movies || movies.length === 0) {
+        return <p>No movies available</p>;
+    }
+
+    const handleLinkClick = () => {
+        setTimeout(() => {
+            window.location.reload();
+        }, 0);
+    };
+
+    return (
+        <MainContainer>
+            <TitleName>박스오피스 순위</TitleName>
+            <MovieList className="scrollable">
+                {movies.map((movie) => (
+                    <MovieItem key={movie.rank}>
+                        <Link to={`/movie/${movie.id}`} onClick={handleLinkClick}>
+                            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                        </Link>
+                        <Content1>{movie.title}</Content1>
+                        <Content2>{movie.release_date.split('-')[0]} ・ {movie.original_language.toUpperCase()}</Content2>
+                        <Content3>평점 {movie.vote_average} ・ 투표수 {movie.vote_count}</Content3>
+                    </MovieItem>
+                ))}
+            </MovieList>
+            <TitleName>공개 예정작</TitleName>
+            <MovieList className="scrollable">
+                {movies.slice(0, 5).map((movie) => (
+                    <MovieItem key={movie.rank}>
+                        <Link to={`/movie/${movie.id}`} onClick={handleLinkClick}>
+                            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                        </Link>
+                        <Content1>{movie.title}</Content1>
+                        <Content2>{movie.release_date.split('-')[0]} ・ {movie.original_language.toUpperCase()}</Content2>
+                        <Content3>평점 {movie.vote_average} ・ 투표수 {movie.vote_count}</Content3>
+                    </MovieItem>
+                ))}
+            </MovieList>
+            <TitleName>왓챠 구매 순위</TitleName>
+            <MovieList className="scrollable">
+                {movies.slice(5, 10).map((movie) => (
+                    <MovieItem key={movie.rank}>
+                        <Link to={`/movie/${movie.id}`} onClick={handleLinkClick}>
+                            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                        </Link>
+                        <Content1>{movie.title}</Content1>
+                        <Content2>{movie.release_date.split('-')[0]} ・ {movie.original_language.toUpperCase()}</Content2>
+                        <Content3>평점 {movie.vote_average} ・ 투표수 {movie.vote_count}</Content3>
+                    </MovieItem>
+                ))}
+            </MovieList>
+        </MainContainer>
+    );
+};
+
+export default Movie;
+
+
 const MainContainer = styled.div`
     position: relative;
     color: rgb(41, 42, 50);
@@ -80,61 +139,3 @@ const Content3 = styled.div`
     line-height: 18px;
     margin-top: 5px;
 `;
-
-const Movie = ({ movies }) => {
-    if (!movies || movies.length === 0) {
-        return <p>No movies available</p>;
-    }
-
-    const handleLinkClick = () => {
-        setTimeout(() => {
-            window.location.reload();
-        }, 0);
-    };
-
-    return (
-        <MainContainer>
-            <TitleName>박스오피스 순위</TitleName>
-            <MovieList className="scrollable">
-                {movies.map((movie) => (
-                    <MovieItem key={movie.rank}>
-                        <Link to={`/movie/${movie.id}`} onClick={handleLinkClick}>
-                            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-                        </Link>
-                        <Content1>{movie.title}</Content1>
-                        <Content2>{movie.release_date.split('-')[0]} ・ {movie.original_language.toUpperCase()}</Content2>
-                        <Content3>평점 {movie.vote_average} ・ 투표수 {movie.vote_count}</Content3>
-                    </MovieItem>
-                ))}
-            </MovieList>
-            <TitleName>공개 예정작</TitleName>
-            <MovieList className="scrollable">
-                {movies.slice(0, 5).map((movie) => (
-                    <MovieItem key={movie.rank}>
-                        <Link to={`/movie/${movie.id}`} onClick={handleLinkClick}>
-                            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-                        </Link>
-                        <Content1>{movie.title}</Content1>
-                        <Content2>{movie.release_date.split('-')[0]} ・ {movie.original_language.toUpperCase()}</Content2>
-                        <Content3>평점 {movie.vote_average} ・ 투표수 {movie.vote_count}</Content3>
-                    </MovieItem>
-                ))}
-            </MovieList>
-            <TitleName>왓챠 구매 순위</TitleName>
-            <MovieList className="scrollable">
-                {movies.slice(5, 10).map((movie) => (
-                    <MovieItem key={movie.rank}>
-                        <Link to={`/movie/${movie.id}`} onClick={handleLinkClick}>
-                            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-                        </Link>
-                        <Content1>{movie.title}</Content1>
-                        <Content2>{movie.release_date.split('-')[0]} ・ {movie.original_language.toUpperCase()}</Content2>
-                        <Content3>평점 {movie.vote_average} ・ 투표수 {movie.vote_count}</Content3>
-                    </MovieItem>
-                ))}
-            </MovieList>
-        </MainContainer>
-    );
-};
-
-export default Movie;
