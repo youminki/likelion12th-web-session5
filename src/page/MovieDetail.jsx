@@ -164,6 +164,7 @@ const MovieDetail = () => {
                 <CastList cast={cast} />
                 <Comments comments={comments.map(comment => ({ author: comment.author, text: comment.content }))} />
                 <Gallery header="갤러리" images={images.map(img => `https://image.tmdb.org/t/p/w500${img.file_path}`)} />
+                <Gallery header="비슷한 작품" images={images.map(img => `https://image.tmdb.org/t/p/w500${img.file_path}`)} />
                 {/* <Video header="동영상" videos={videos} /> */}
             </ContentContainer>
         </div>
