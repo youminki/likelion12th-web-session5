@@ -86,13 +86,19 @@ const Movie = ({ movies }) => {
         return <p>No movies available</p>;
     }
 
+    const handleLinkClick = () => {
+        setTimeout(() => {
+            window.location.reload();
+        }, 0);
+    };
+
     return (
         <MainContainer>
             <TitleName>박스오피스 순위</TitleName>
             <MovieList className="scrollable">
                 {movies.map((movie) => (
                     <MovieItem key={movie.rank}>
-                        <Link to={`/movie/${movie.id}`}>
+                        <Link to={`/movie/${movie.id}`} onClick={handleLinkClick}>
                             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                         </Link>
                         <Content1>{movie.title}</Content1>
@@ -105,7 +111,7 @@ const Movie = ({ movies }) => {
             <MovieList className="scrollable">
                 {movies.slice(0, 5).map((movie) => (
                     <MovieItem key={movie.rank}>
-                        <Link to={`/movie/${movie.id}`}>
+                        <Link to={`/movie/${movie.id}`} onClick={handleLinkClick}>
                             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                         </Link>
                         <Content1>{movie.title}</Content1>
@@ -118,7 +124,7 @@ const Movie = ({ movies }) => {
             <MovieList className="scrollable">
                 {movies.slice(5, 10).map((movie) => (
                     <MovieItem key={movie.rank}>
-                        <Link to={`/movie/${movie.id}`}>
+                        <Link to={`/movie/${movie.id}`} onClick={handleLinkClick}>
                             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                         </Link>
                         <Content1>{movie.title}</Content1>

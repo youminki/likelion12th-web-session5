@@ -87,14 +87,16 @@ const MovieDetail = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
-        const apiKey = process.env.REACT_APP_TMDB_API_KEY;
-        const movieUrl = `https://api.themoviedb.org/3/movie/${rank}?api_key=${apiKey}&language=ko-KR`;
-        const imagesUrl = `https://api.themoviedb.org/3/movie/${rank}/images?api_key=${apiKey}`;
-        const castUrl = `https://api.themoviedb.org/3/movie/${rank}/credits?api_key=${apiKey}`;
-        const commentsUrl = `https://api.themoviedb.org/3/movie/${rank}/reviews?api_key=${apiKey}`;
-        const videosUrl = `https://api.themoviedb.org/3/movie/${rank}/videos?api_key=${apiKey}`;
-
         const fetchMovieData = async () => {
+            const apiKey = process.env.REACT_APP_TMDB_API_KEY;
+            const movieUrl = `https://api.themoviedb.org/3/movie/${rank}?api_key=${apiKey}&language=ko-KR`;
+            const imagesUrl = `https://api.themoviedb.org/3/movie/${rank}/images?api_key=${apiKey}`;
+            const castUrl = `https://api.themoviedb.org/3/movie/${rank}/credits?api_key=${apiKey}`;
+            const commentsUrl = `https://api.themoviedb.org/3/movie/${rank}/reviews?api_key=${apiKey}`;
+            const videosUrl = `https://api.themoviedb.org/3/movie/${rank}/videos?api_key=${apiKey}`;
+
+            setIsLoading(true);
+
             try {
                 const [movieRes, imagesRes, castRes, commentsRes] = await Promise.all([
                     axios.get(movieUrl),
@@ -116,7 +118,6 @@ const MovieDetail = () => {
                 setIntroImage(movieRes.data.backdrop_path);
                 setCast(castRes.data.cast);
                 setComments(commentsRes.data.results);
-                // setVideos(videosRes.data.results);
                 setIsLoading(false);
             } catch (error) {
                 console.error("Error fetching movie data:", error);
@@ -126,7 +127,7 @@ const MovieDetail = () => {
         };
 
         fetchMovieData();
-    }, [rank]); // Only re-run the effect if 'rank' changes
+    }, [rank]);
 
     if (isLoading) {
         return <p>Loading...</p>;
