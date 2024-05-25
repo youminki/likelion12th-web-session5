@@ -30,6 +30,8 @@ const ComentContent1 = styled.div`
 `;
 
 const CommentMainbox = styled.ul`
+    overflow-x: auto;
+    white-space: nowrap;
     grid-template-columns: repeat(4, minmax(350px, 1fr));
     display: grid;
     gap: 8px;
@@ -79,9 +81,10 @@ const BoxC1 = styled.div`
 
 const BoxC2 = styled.div`
     position: relative;
-    height: 120px;
+    height: 300px;
     margin: 12px 0px 15px;
     padding: 2px 8px;
+    overflow-y: auto;
 `;
 
 const BoxC3 = styled.div`

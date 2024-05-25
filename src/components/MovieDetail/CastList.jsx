@@ -17,31 +17,36 @@ const MainContainer3 = styled.div`
 const UlContainer = styled.div`
     padding-left: 50px;
     padding-bottom: 20px;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 70px);
     border-bottom: 1px solid rgb(240, 240, 240);
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: calc(4 * 170px);
+    white-space: nowrap;
+
+    & > div {
+        min-width: 150px;
+        min-height: 150px;
+    }
 `;
 
-const Picture = styled.div`
-    position: relative;
-    z-index: 1;
-    background: url(https://an2-img.amz.wtchn.net/image/v2/5L6g3KyDX39s88lm0Ltfaw.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qUXdlREkwTUNKZExDSndJam9pTDNZeUwzTjBiM0psTDNCbGNuTnZiaTh4TmpVeE16STRNek13T1RNMk5qTTNOVFE1SW4wLlBWMjlhVmRBNHJEdWd3dzBwWW5JSnhIVWZSbm5WMDVqVTNSVS1rYkZIOFU) center center / cover no-repeat;
+
+const Picture = styled.img`
     width: 80px;
     height: 80px;
     cursor: pointer;
-    border-radius: 5px !important;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px inset;
 `;
 
 const PictureContent = styled.div`
     padding-left: 10px;
     padding-right: 100px;
-    align-items: center;
     box-sizing: border-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -77,15 +82,17 @@ const PictureContent2 = styled.div`
 const CastList = ({ cast }) => (
     <MainContainer3>
         <header className='headerContainer'> 출연/제작</header>
-        {cast.map((member, index) => (
-            <UlContainer key={index}>
-                <Picture />
-                <PictureContent>
-                    <PictureContent1>{member.name}</PictureContent1>
-                    <PictureContent2>{member.role}</PictureContent2>
-                </PictureContent>
-            </UlContainer>
-        ))}
+        <UlContainer>
+            {cast.map((member, index) => (
+                <div key={index}>
+                    <Picture src={`https://image.tmdb.org/t/p/w500${member.profile_path}`} alt={member.name} />
+                    <PictureContent>
+                        <PictureContent1>{member.name}</PictureContent1>
+                        <PictureContent2>{member.character}</PictureContent2>
+                    </PictureContent>
+                </div>
+            ))}
+        </UlContainer>
     </MainContainer3>
 );
 
