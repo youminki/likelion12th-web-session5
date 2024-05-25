@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useRecoilValue } from 'recoil';
 import styled from 'styled-components';
+import { topRatedMoviesState } from '../attoms/movieAtoms.jsx';
 import Modal from '../components/Modal2.jsx';
 import CastList from '../components/MovieDetail/CastList.jsx';
 import Comments from '../components/MovieDetail/Comments.jsx';
@@ -9,7 +11,6 @@ import Gallery from '../components/MovieDetail/Gallery.jsx';
 import MovieActions from '../components/MovieDetail/MovieActions.jsx';
 import MovieInfo from '../components/MovieDetail/MovieInfo.jsx';
 import Rating from '../components/MovieDetail/Rating.jsx';
-// import Video from '../components/MovieDetail/Video.jsx';
 
 const MainContainer2 = styled.div`
     display: flex;
@@ -73,12 +74,12 @@ const ContentContainer = styled.div`
 
 const MovieDetail = () => {
     const { rank } = useParams();
+    const topRatedMovies = useRecoilValue(topRatedMoviesState);
     const [movie, setMovie] = useState(null);
     const [images, setImages] = useState([]);
     const [introImage, setIntroImage] = useState('');
     const [cast, setCast] = useState([]);
     const [comments, setComments] = useState([]);
-    // const [videos, setVideos] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     const [modalContent, setModalContent] = useState('');
@@ -117,21 +118,21 @@ const MovieDetail = () => {
                 // setVideos(videosRes.data.results);
                 setIsLoading(false);
             } catch (error) {
-                console.error("데이터 가져오는 중 에러 발생:", error);
+                console.error("Error fetching movie data:", error);
                 setError(error);
                 setIsLoading(false);
             }
         };
 
         fetchMovieData();
-    }, [rank]);
+    }, [rank]); // Only re-run the effect if 'rank' changes
 
     if (isLoading) {
-        return <p>로딩 중...</p>;
+        return <p>Loading...</p>;
     }
 
     if (error) {
-        return <p>영화 데이터를 로드하는 중 오류가 발생했습니다.</p>;
+        return <p>Error loading movie data.</p>;
     }
 
     const handleIconClick = (content) => {
@@ -163,9 +164,8 @@ const MovieDetail = () => {
                 </MainContainer2>
                 <CastList cast={cast} />
                 <Comments comments={comments.map(comment => ({ author: comment.author, text: comment.content }))} />
-                <Gallery header="갤러리" images={images.map(img => `https://image.tmdb.org/t/p/w500${img.file_path}`)} />
-                <Gallery header="비슷한 작품" images={images.map(img => `https://image.tmdb.org/t/p/w500${img.file_path}`)} />
-                {/* <Video header="동영상" videos={videos} /> */}
+                <Gallery header="Gallery" images={images.map(img => `https://image.tmdb.org/t/p/w500${img.file_path}`)} />
+                <Gallery header="비슷한 작품" images={topRatedMovies.map(movie => `https://image.tmdb.org/t/p/w500${movie.poster_path}`)} />
             </ContentContainer>
         </div>
     );

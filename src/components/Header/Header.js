@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
 import watcha from '../../assets/image/icon_logo.png';
 import searchImg from '../../assets/image/icon_search.png';
+import { topRatedMoviesState } from '../../attoms/movieAtoms.jsx';
 import Book from '../../page/Book';
 import Movie from '../../page/Movie';
 import Series from '../../page/Series';
@@ -19,6 +21,21 @@ const Header = () => {
   const [filteredSeries, setFilteredSeries] = useState([]);
   const [isLoadingMovies, setIsLoadingMovies] = useState(true);
   const [isLoadingSeries, setIsLoadingSeries] = useState(true);
+
+  const setTopRatedMovies = useSetRecoilState(topRatedMoviesState);
+
+  useEffect(() => {
+    const apiKey = process.env.REACT_APP_TMDB_API_KEY;
+    const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=ko-KR`;
+    axios.get(url)
+      .then(response => {
+        setTopRatedMovies(response.data.results);
+      })
+      .catch(error => console.error('Error fetching top rated movies:', error));
+  }, [setTopRatedMovies]);
+
+
+
 
   useEffect(() => {
     const fetchMovies = async () => {
