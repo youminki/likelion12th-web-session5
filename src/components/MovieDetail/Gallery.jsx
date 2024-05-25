@@ -20,6 +20,7 @@ const GalleryList = styled.div`
     overflow-x: auto;
     white-space: nowrap;
     margin-top: 42px;
+    margin-bottom: 100px;
 
 `;
 

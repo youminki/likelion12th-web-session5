@@ -8,10 +8,10 @@ function App() {
     <>
       <Header />
       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Movie />} />
-        <Route path="/movie/:rank" element={<MovieDetail />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Movie />} />
+          <Route path="/movie/:rank" element={<MovieDetail />} />
+        </Routes>
       </BrowserRouter>
       <Footer />
     </>

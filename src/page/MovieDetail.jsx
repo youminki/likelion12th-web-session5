@@ -9,7 +9,7 @@ import Gallery from '../components/MovieDetail/Gallery.jsx';
 import MovieActions from '../components/MovieDetail/MovieActions.jsx';
 import MovieInfo from '../components/MovieDetail/MovieInfo.jsx';
 import Rating from '../components/MovieDetail/Rating.jsx';
-import Video from '../components/MovieDetail/Video.jsx';
+// import Video from '../components/MovieDetail/Video.jsx';
 
 const MainContainer2 = styled.div`
     display: flex;
@@ -78,7 +78,7 @@ const MovieDetail = () => {
     const [introImage, setIntroImage] = useState('');
     const [cast, setCast] = useState([]);
     const [comments, setComments] = useState([]);
-    const [videos, setVideos] = useState([]);
+    // const [videos, setVideos] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     const [modalContent, setModalContent] = useState('');
@@ -94,7 +94,7 @@ const MovieDetail = () => {
 
         const fetchMovieData = async () => {
             try {
-                const [movieRes, imagesRes, castRes, commentsRes, videosRes] = await Promise.all([
+                const [movieRes, imagesRes, castRes, commentsRes] = await Promise.all([
                     axios.get(movieUrl),
                     axios.get(imagesUrl),
                     axios.get(castUrl),
@@ -114,7 +114,7 @@ const MovieDetail = () => {
                 setIntroImage(movieRes.data.backdrop_path);
                 setCast(castRes.data.cast);
                 setComments(commentsRes.data.results);
-                setVideos(videosRes.data.results);
+                // setVideos(videosRes.data.results);
                 setIsLoading(false);
             } catch (error) {
                 console.error("데이터 가져오는 중 에러 발생:", error);
@@ -164,7 +164,7 @@ const MovieDetail = () => {
                 <CastList cast={cast} />
                 <Comments comments={comments.map(comment => ({ author: comment.author, text: comment.content }))} />
                 <Gallery header="갤러리" images={images.map(img => `https://image.tmdb.org/t/p/w500${img.file_path}`)} />
-                <Video header="동영상" videos={videos} />
+                {/* <Video header="동영상" videos={videos} /> */}
             </ContentContainer>
         </div>
     );
