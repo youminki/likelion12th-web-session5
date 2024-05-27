@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import watcha from '../../assets/image/icon_logo.png';
 import searchImg from '../../assets/image/icon_search.png';
@@ -99,10 +99,10 @@ const Header = () => {
           <div className='watchaLogo'>
             <img src={watcha} alt='watcha' />
             <div className='menu'>
-              <Link to='/movie'>영화</Link>
-              <Link to='/series'>시리즈</Link>
-              <Link to='/book'>책</Link>
-              <Link to='/webtoon'>웹툰</Link>
+              <a href='/movie'>영화</a>
+              <a href='/series'>시리즈</a>
+              <a href='/book'>책</a>
+              <a href='/webtoon'>웹툰</a>
             </div>
           </div>
 
