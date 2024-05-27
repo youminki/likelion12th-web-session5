@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
-import { useSetRecoilState } from 'recoil';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 import watcha from '../../assets/image/icon_logo.png';
 import searchImg from '../../assets/image/icon_search.png';
-import { topRatedMoviesState } from '../../attoms/movieAtoms.jsx';
+import { darkModeState, topRatedMoviesState } from '../../attoms/movieAtoms.jsx';
 import Book from '../../page/Book';
 import Movie from '../../page/Movie';
 import Series from '../../page/Series';
@@ -23,6 +23,7 @@ const Header = () => {
   const [isLoadingSeries, setIsLoadingSeries] = useState(true);
 
   const setTopRatedMovies = useSetRecoilState(topRatedMoviesState);
+  const [darkMode, setDarkMode] = useRecoilState(darkModeState);
 
   useEffect(() => {
     const apiKey = process.env.REACT_APP_TMDB_API_KEY;
@@ -33,9 +34,6 @@ const Header = () => {
       })
       .catch(error => console.error('Error fetching top rated movies:', error));
   }, [setTopRatedMovies]);
-
-
-
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -86,6 +84,10 @@ const Header = () => {
     setSearchTerm(event.target.value);
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => !prevMode);
+  };
+
   if (isLoadingMovies || isLoadingSeries) {
     return <p>Loading...</p>;
   }
@@ -93,7 +95,7 @@ const Header = () => {
   return (
     <Router>
       <>
-        <div className='header'>
+        <div className={`header ${darkMode ? 'dark-mode' : ''}`}>
           <div className='watchaLogo'>
             <img src={watcha} alt='watcha' />
             <div className='menu'>
@@ -115,6 +117,9 @@ const Header = () => {
                 className='searchInput'
               />
             </div>
+            <button onClick={toggleDarkMode} className='darkModeToggle'>
+              {darkMode ? '라이트 모드' : '다크 모드'}
+            </button>
             <Login />
             <SignUp />
           </div>
