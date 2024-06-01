@@ -1,6 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+
+const Gallery = ({ header, images }) => (
+    <MainContainer4>
+        <GalleryHeader>{header}</GalleryHeader>
+        <GalleryList className="scrollable">
+            {images.map((image, index) => (
+                <GalleryImg key={index} style={{ backgroundImage: `url(${image})` }} />
+            ))}
+        </GalleryList>
+    </MainContainer4>
+);
+
+export default Gallery;
+
 const MainContainer4 = styled.div`
     padding-left: 50px;
 `;
@@ -35,16 +50,3 @@ const GalleryImg = styled.div`
     transition: all 300ms ease 0s;
     margin-right: 10px;
 `;
-
-const Gallery = ({ header, images }) => (
-    <MainContainer4>
-        <GalleryHeader>{header}</GalleryHeader>
-        <GalleryList className="scrollable">
-            {images.map((image, index) => (
-                <GalleryImg key={index} style={{ backgroundImage: `url(${image})` }} />
-            ))}
-        </GalleryList>
-    </MainContainer4>
-);
-
-export default Gallery;

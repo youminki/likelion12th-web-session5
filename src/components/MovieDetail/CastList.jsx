@@ -1,6 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const CastList = ({ cast }) => (
+    <MainContainer3>
+        <header className='headerContainer'> 출연/제작</header>
+        <UlContainer>
+            {cast.map((member, index) => (
+                <div key={index}>
+                    <Picture src={`https://image.tmdb.org/t/p/w500${member.profile_path}`} alt={member.name} />
+                    <PictureContent>
+                        <PictureContent1>{member.name}</PictureContent1>
+                        <PictureContent2>{member.character}</PictureContent2>
+                    </PictureContent>
+                </div>
+            ))}
+        </UlContainer>
+    </MainContainer3>
+);
+
+export default CastList;
+
 const MainContainer3 = styled.div`
     .headerContainer {
         padding-left: 50px;
@@ -78,22 +97,3 @@ const PictureContent2 = styled.div`
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 `;
-
-const CastList = ({ cast }) => (
-    <MainContainer3>
-        <header className='headerContainer'> 출연/제작</header>
-        <UlContainer>
-            {cast.map((member, index) => (
-                <div key={index}>
-                    <Picture src={`https://image.tmdb.org/t/p/w500${member.profile_path}`} alt={member.name} />
-                    <PictureContent>
-                        <PictureContent1>{member.name}</PictureContent1>
-                        <PictureContent2>{member.character}</PictureContent2>
-                    </PictureContent>
-                </div>
-            ))}
-        </UlContainer>
-    </MainContainer3>
-);
-
-export default CastList;

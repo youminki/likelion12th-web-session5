@@ -1,6 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+const Modal = ({ isOpen, closeModal, modalContent }) => {
+    if (!isOpen) return null;
+
+    return (
+        <ModalBackground>
+            <ModalContentWrapper>
+                <div>
+                    <BackButton onClick={closeModal} />
+                </div>
+                <ModalIcon />
+                <ModalTextContent>{modalContent}</ModalTextContent>
+                <SignupButton>회원가입</SignupButton>
+                <LoginButton>로그인</LoginButton>
+            </ModalContentWrapper>
+        </ModalBackground>
+    );
+};
+
+export default Modal;
+
 const ModalBackground = styled.div`
     position: fixed;
     top: 0;
@@ -84,23 +105,3 @@ const BackButton = styled.button`
     width: 24px;
     height: 24px;
 `;
-
-const Modal = ({ isOpen, closeModal, modalContent }) => {
-    if (!isOpen) return null;
-
-    return (
-        <ModalBackground>
-            <ModalContentWrapper>
-                <div>
-                    <BackButton onClick={closeModal} />
-                </div>
-                <ModalIcon />
-                <ModalTextContent>{modalContent}</ModalTextContent>
-                <SignupButton>회원가입</SignupButton>
-                <LoginButton>로그인</LoginButton>
-            </ModalContentWrapper>
-        </ModalBackground>
-    );
-};
-
-export default Modal;

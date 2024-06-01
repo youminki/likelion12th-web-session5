@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 import watcha from '../../assets/image/icon_logo.png';
 import searchImg from '../../assets/image/icon_search.png';
+import { darkModeState, topRatedMoviesState } from '../../attoms/movieAtoms.jsx';
 import Book from '../../page/Book';
 import Movie from '../../page/Movie';
 import Series from '../../page/Series';
@@ -19,6 +21,19 @@ const Header = () => {
   const [filteredSeries, setFilteredSeries] = useState([]);
   const [isLoadingMovies, setIsLoadingMovies] = useState(true);
   const [isLoadingSeries, setIsLoadingSeries] = useState(true);
+
+  const setTopRatedMovies = useSetRecoilState(topRatedMoviesState);
+  const [darkMode, setDarkMode] = useRecoilState(darkModeState);
+
+  useEffect(() => {
+    const apiKey = process.env.REACT_APP_TMDB_API_KEY;
+    const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=ko-KR`;
+    axios.get(url)
+      .then(response => {
+        setTopRatedMovies(response.data.results);
+      })
+      .catch(error => console.error('Error fetching top rated movies:', error));
+  }, [setTopRatedMovies]);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -69,6 +84,10 @@ const Header = () => {
     setSearchTerm(event.target.value);
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => !prevMode);
+  };
+
   if (isLoadingMovies || isLoadingSeries) {
     return <p>Loading...</p>;
   }
@@ -76,14 +95,14 @@ const Header = () => {
   return (
     <Router>
       <>
-        <div className='header'>
+        <div className={`header ${darkMode ? 'dark-mode' : ''}`}>
           <div className='watchaLogo'>
             <img src={watcha} alt='watcha' />
             <div className='menu'>
-              <Link to='/movie'>영화</Link>
-              <Link to='/series'>시리즈</Link>
-              <Link to='/book'>책</Link>
-              <Link to='/webtoon'>웹툰</Link>
+              <a href='/movie'>영화</a>
+              <a href='/series'>시리즈</a>
+              <a href='/book'>책</a>
+              <a href='/webtoon'>웹툰</a>
             </div>
           </div>
 
@@ -98,6 +117,9 @@ const Header = () => {
                 className='searchInput'
               />
             </div>
+            <button onClick={toggleDarkMode} className='darkModeToggle'>
+              {darkMode ? '라이트 모드' : '다크 모드'}
+            </button>
             <Login />
             <SignUp />
           </div>

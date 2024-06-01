@@ -1,6 +1,41 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+const Comments = ({ comments }) => (
+    <MainContainer4>
+        <ComentHeader>
+            <h2> 코멘트</h2>
+            <span>4500+</span>
+            <ComentContent1>더보기</ComentContent1>
+        </ComentHeader>
+        <CommentMainbox>
+            {comments.map((comment, index) => (
+                <CommentSubbox key={index}>
+                    <BoxC>
+                        <BoxC1>
+                            <div>{comment.author}</div>
+                            <div className='starBox'>
+                                <img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px" />4.5
+                            </div>
+                        </BoxC1>
+                        <BoxC2>{comment.text}</BoxC2>
+                        <BoxC3>
+                            <Ddabong />
+                            <div className='num'>255</div>
+                            <Chat />
+                            <div className='num'>23</div>
+                        </BoxC3>
+                        <BoxC4>좋아요</BoxC4>
+                    </BoxC>
+                </CommentSubbox>
+            ))}
+        </CommentMainbox>
+    </MainContainer4>
+);
+
+export default Comments;
+
 const MainContainer4 = styled.div`
     padding-left: 50px;
 `;
@@ -132,37 +167,3 @@ const Chat = styled.div`
     height: 18px;
     margin: 0px 3px 0px 13px;
 `;
-
-const Comments = ({ comments }) => (
-    <MainContainer4>
-        <ComentHeader>
-            <h2> 코멘트</h2>
-            <span>4500+</span>
-            <ComentContent1>더보기</ComentContent1>
-        </ComentHeader>
-        <CommentMainbox>
-            {comments.map((comment, index) => (
-                <CommentSubbox key={index}>
-                    <BoxC>
-                        <BoxC1>
-                            <div>{comment.author}</div>
-                            <div className='starBox'>
-                                <img alt="star" height="16px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM0QTRBNEEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDE3Ljk4bC02LjAxNSA0LjM5MmMtLjUwOC4zNzItMS4xOTQtLjEyNi0uOTk4LS43MjVsMi4zMTctNy4wODEtNi4wMzUtNC4zNjdjLS41MS0uMzY5LS4yNDctMS4xNzUuMzgyLTEuMTc0bDcuNDQ3LjAxNiAyLjI4Ni03LjA5MWMuMTkyLS42IDEuMDQtLjYgMS4yMzMgMGwyLjI4NiA3LjA5IDcuNDQ3LS4wMTVjLjYyOS0uMDAxLjg5LjgwNS4zOCAxLjE3NGwtNi4wMzMgNC4zNjcgMi4zMTYgNy4wOGMuMTk2LjYtLjQ5IDEuMDk4LS45OTkuNzI2TDEyIDE3Ljk4eiIvPgo8L3N2Zz4K" width="16px" />4.5
-                            </div>
-                        </BoxC1>
-                        <BoxC2>{comment.text}</BoxC2>
-                        <BoxC3>
-                            <Ddabong />
-                            <div className='num'>255</div>
-                            <Chat />
-                            <div className='num'>23</div>
-                        </BoxC3>
-                        <BoxC4>좋아요</BoxC4>
-                    </BoxC>
-                </CommentSubbox>
-            ))}
-        </CommentMainbox>
-    </MainContainer4>
-);
-
-export default Comments;

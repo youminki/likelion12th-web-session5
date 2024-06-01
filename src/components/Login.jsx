@@ -42,7 +42,7 @@ const Login = () => {
                 <div className="Content" style={{ color: "#ff2f6e" }}>비밀번호를 잃어버리셨나요?</div>
                 <div className="CenterBlock">
                     <div className="Content" style={{ color: "#8c8c8c" }}>계정이 없으신가요?</div>
-                    <div className="Content" style={{ color: "#ff2f6e" }}>회원가입</div>
+                    <div className="Content"  style={{ color: "#ff2f6e" }}>회원가입</div>
                 </div>
                 <div className="CenterBlock">
                     <div className="GrayLine" />

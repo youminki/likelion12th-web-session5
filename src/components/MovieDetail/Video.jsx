@@ -1,6 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const VideoGallery = ({ header, videos }) => {
+    return (
+        <div>
+            <Header>{header}</Header>
+            <VideoContainer>
+                {videos.map((video) => (
+                    <VideoWrapper key={video.key}>
+                        <VideoFrame
+                            src={`https://www.youtube.com/embed/${video.key}`}
+                            allowFullScreen
+                            title={video.name}
+                        />
+                    </VideoWrapper>
+                ))}
+            </VideoContainer>
+        </div>
+    );
+};
+
+export default VideoGallery;
+
 const VideoContainer = styled.div`
     display: flex;
     overflow-x: auto;
@@ -35,24 +56,3 @@ const Header = styled.h2`
     text-align: center;
     margin-bottom: 20px;
 `;
-
-const VideoGallery = ({ header, videos }) => {
-    return (
-        <div>
-            <Header>{header}</Header>
-            <VideoContainer>
-                {videos.map((video) => (
-                    <VideoWrapper key={video.key}>
-                        <VideoFrame
-                            src={`https://www.youtube.com/embed/${video.key}`}
-                            allowFullScreen
-                            title={video.name}
-                        />
-                    </VideoWrapper>
-                ))}
-            </VideoContainer>
-        </div>
-    );
-};
-
-export default VideoGallery;

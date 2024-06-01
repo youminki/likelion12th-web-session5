@@ -192,3 +192,48 @@
     font-size: 15px;
     text-decoration: none;
 }
+
+
+
+
+.header.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+
+
+.header .menu a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header .userControls {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.header .searchInput {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.header .darkModeToggle {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.header.dark-mode .searchInput {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #777;
+}
+
